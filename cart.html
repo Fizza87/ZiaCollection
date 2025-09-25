@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart - Your Store</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Cart Page Styles */
+    .cart-container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #111;
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+
+    .cart-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: orange;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      color: white;
+    }
+
+    table th, table td {
+      padding: 12px;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+
+    table img {
+      width: 60px;
+      border-radius: 5px;
+    }
+
+    .remove-btn {
+      background: red;
+      color: white;
+      border: none;
+      padding: 5px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .remove-btn:hover {
+      background: darkred;
+    }
+
+    .cart-total {
+      text-align: right;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    .checkout-btn {
+      display: block;
+      margin: 20px auto 0;
+      background: orange;
+      color: black;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .checkout-btn:hover {
+      background: #ff8c00;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">Your Store</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="men.html">Men</a></li>
+      <li><a href="women.html">Women</a></li>
+      <li><a href="kids.html">Kids</a></li>
+      <li><a href="cart.html" class="active">Cart</a></li>
+    </ul>
+    <button class="cart-btn">Cart</button>
+  </nav>
+
+  <!-- CART SECTION -->
+  <div class="cart-container">
+    <h2>Your Shopping Cart 🛒</h2>
+
+    <table id="cart-table">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Product</th>
+          <th>Size</th>
+          <th>Color</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Items will load here with JS -->
+      </tbody>
+    </table>
+
+    <div class="cart-total">
+      <strong>Total: Rs. <span id="cart-total">0</span></strong>
+    </div>
+
+    <button class="checkout-btn">Proceed to Checkout</button>
+  </div>
+
+  <script>
+    // ===== LOAD CART ITEMS FROM LOCALSTORAGE =====
+    function loadCart() {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const cartTable = document.querySelector("#cart-table tbody");
+      const totalDisplay = document.getElementById("cart-total");
+      cartTable.innerHTML = "";
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        const subtotal = item.price * item.quantity;
+        total += subtotal;
+
+        const row = `
+          <tr>
+            <td><img src="${item.image}" alt="${item.name}"></td>
+            <td>${item.name}</td>
+            <td>${item.size}</td>
+            <td>${item.color}</td>
+            <td>Rs. ${item.price}</td>
+            <td>${item.quantity}</td>
+            <td>Rs. ${subtotal}</td>
+            <td><button class="remove-btn" onclick="removeItem(${index})">X</button></td>
+          </tr>
+        `;
+        cartTable.innerHTML += row;
+      });
+
+      totalDisplay.textContent = total;
+    }
+
+    // ===== REMOVE ITEM =====
+    function removeItem(index) {
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.splice(index, 1);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      loadCart();
+    }
+
+    // ===== ON PAGE LOAD =====
+    document.addEventListener("DOMContentLoaded", loadCart);
+  </script>
+</body>
+</html>

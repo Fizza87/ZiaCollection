@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zia Collections - Women</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* === Banner === */
+    .women-banner {
+      background: url('women-banner.jpg') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: rgb(239, 234, 234);
+    }
+
+    .women-banner .banner-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    /* === Product Grid === */
+    .featured-products {
+      padding: 40px 20px;
+      background: #eccab7;
+    }
+
+    .featured-products h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #090808;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background: #efeaea;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .product-details {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .product-name {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color:#141414;
+    }
+
+    .product-price {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      color: #141414;
+    }
+
+    .selectors {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    select,
+    input[type="number"] {
+      padding: 6px;
+      border-radius: 5px;
+      border: 1px solid #141414;
+      font-size: 0.9rem;
+    }
+
+    .add-to-cart-btn {
+      background: #111111;
+      color: #f4f0f0;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    .add-to-cart-btn:hover {
+      background: #f10404;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- Logo -->
+      <div class="header-left">
+        <a href="index.html" class="logo-link">
+          <img src="zia.png" alt="Zia Collections Logo" class="logo-img">
+        </a>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="Sales.html" class="nav-link active">Sales</a></li>
+          <li class="nav-item"><a href="NewArrivals.html" class="nav-link active">New Arrivals</a></li>
+          <li class="nav-item"><a href="kids.html" class="nav-link">Kids</a></li>
+          <li class="nav-item"><a href="women.html" class="nav-link active">Women</a></li>
+          <li class="nav-item"><a href="men.html" class="nav-link">Men</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right icons -->
+      <div class="header-right">
+        <button class="icon-btn"><img src="search.png" alt="Search" class="icon-img"></button>
+        <button class="icon-btn"><img src="login.png" alt="Login" class="icon-img"></button>
+        <button class="icon-btn"><img src="cart.png" alt="Cart" class="icon-img"></button>
+      </div>
+    </div>
+  </header>
+
+  <hr class="header-divider">
+
+  <!-- ===== BANNER ===== -->
+  <section class="banner-section women-banner">
+    <div class="banner-content">
+      <h1>WOMEN'S COLLECTION</h1>
+      <p>Trendy • Elegant • Comfortable</p>
+      <a href="#featured" class="shop-now-btn">SHOP NOW</a>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED PRODUCTS ===== -->
+  <section id="featured" class="featured-products">
+    <div class="section-container">
+      <h2>Women's Featured Products</h2>
+      <div class="product-grid">
+        
+        <!-- Product Template -->
+        <div class="product-card" data-category="Dresses">
+          <a href="#"><img src="dress1.png" alt="Floral Dress"></a>
+          <div class="product-details">
+            <p class="product-name">Floral Maxi Dress</p>
+            <div class="product-price"><span class="price-amount">Rs. 3500.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+              </select>
+              <select>
+                <option>Color: Red</option>
+                <option>Blue</option>
+                <option>Green</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card" data-category="Tops">
+          <a href="#"><img src="top1.png" alt="Casual Top"></a>
+          <div class="product-details">
+            <p class="product-name">Casual Summer Top</p>
+            <div class="product-price"><span class="price-amount">Rs. 1800.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+              </select>
+              <select>
+                <option>Color: White</option>
+                <option>Black</option>
+                <option>Pink</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card" data-category="Bottoms">
+          <a href="#"><img src="pant1.png" alt="Stylish Pants"></a>
+          <div class="product-details">
+            <p class="product-name">Stylish Wide Pants</p>
+            <div class="product-price"><span class="price-amount">Rs. 2500.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Color: Black</option>
+                <option>Beige</option>
+                <option>Blue</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card" data-category="Traditional">
+          <a href="#"><img src="kurta1.png" alt="Kurta"></a>
+          <div class="product-details">
+            <p class="product-name">Elegant Kurta</p>
+            <div class="product-price"><span class="price-amount">Rs. 3000.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Color: White</option>
+                <option>Black</option>
+                <option>Maroon</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <!-- Product 4 -->
+        <div class="product-card" data-category="Traditional">
+          <a href="#"><img src="kurta1.png" alt="Kurta"></a>
+          <div class="product-details">
+            <p class="product-name">Elegant Kurta</p>
+            <div class="product-price"><span class="price-amount">Rs. 3000.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Color: White</option>
+                <option>Black</option>
+                <option>Maroon</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <!-- Product 4 -->
+        <div class="product-card" data-category="Traditional">
+          <a href="#"><img src="kurta1.png" alt="Kurta"></a>
+          <div class="product-details">
+            <p class="product-name">Elegant Kurta</p>
+            <div class="product-price"><span class="price-amount">Rs. 3000.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Color: White</option>
+                <option>Black</option>
+                <option>Maroon</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <!-- Product 7 -->
+        <!-- Product 4 -->
+        <div class="product-card" data-category="Traditional">
+          <a href="#"><img src="kurta1.png" alt="Kurta"></a>
+          <div class="product-details">
+            <p class="product-name">Elegant Kurta</p>
+            <div class="product-price"><span class="price-amount">Rs. 3000.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Color: White</option>
+                <option>Black</option>
+                <option>Maroon</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <!-- Product 8 -->
+        <!-- Product 4 -->
+        <div class="product-card" data-category="Traditional">
+          <a href="#"><img src="kurta1.png" alt="Kurta"></a>
+          <div class="product-details">
+            <p class="product-name">Elegant Kurta</p>
+            <div class="product-price"><span class="price-amount">Rs. 3000.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Color: White</option>
+                <option>Black</option>
+                <option>Maroon</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <!-- Product 9 -->
+        <!-- Product 4 -->
+        <div class="product-card" data-category="Traditional">
+          <a href="#"><img src="kurta1.png" alt="Kurta"></a>
+          <div class="product-details">
+            <p class="product-name">Elegant Kurta</p>
+            <div class="product-price"><span class="price-amount">Rs. 3000.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Color: White</option>
+                <option>Black</option>
+                <option>Maroon</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <!-- Product 10 -->
+        <!-- Product 4 -->
+        <div class="product-card" data-category="Traditional">
+          <a href="#"><img src="kurta1.png" alt="Kurta"></a>
+          <div class="product-details">
+            <p class="product-name">Elegant Kurta</p>
+            <div class="product-price"><span class="price-amount">Rs. 3000.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Color: White</option>
+                <option>Black</option>
+                <option>Maroon</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <!-- Product 11 -->
+        <!-- Product 4 -->
+        <div class="product-card" data-category="Traditional">
+          <a href="#"><img src="kurta1.png" alt="Kurta"></a>
+          <div class="product-details">
+            <p class="product-name">Elegant Kurta</p>
+            <div class="product-price"><span class="price-amount">Rs. 3000.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Color: White</option>
+                <option>Black</option>
+                <option>Maroon</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <!-- Product 12 -->
+        <!-- Product 4 -->
+        <div class="product-card" data-category="Traditional">
+          <a href="#"><img src="kurta1.png" alt="Kurta"></a>
+          <div class="product-details">
+            <p class="product-name">Elegant Kurta</p>
+            <div class="product-price"><span class="price-amount">Rs. 3000.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Color: White</option>
+                <option>Black</option>
+                <option>Maroon</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-column">
+        <h3>HELP</h3>
+        <ul>
+          <li><a href="#">EXCHANGE & RETURN</a></li>
+          <li><a href="#">FAQ'S</a></li>
+          <li><a href="#">CONTACT US</a></li>
+          <li><a href="#">TERMS & CONDITIONS</a></li>
+          <li><a href="#">PRIVACY POLICIES</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>MORE ABOUT ZIA COLLECTIONS</h3>
+        <ul>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">STORE LOCATOR</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="social-links">
+        <a href="#"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="twitter.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </footer>
+  <div class="bottom-footer-text">
+    <p>All Rights Reserved. © 2024 ZIA Collections</p>
+  </div>
+</body>
+</html>

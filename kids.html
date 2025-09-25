@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zia Collections - Kids</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* === Banner === */
+    .kids-banner {
+      background: url('kids-banner.jpg') center/cover no-repeat;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: rgb(239, 234, 234);
+    }
+
+    .kids-banner .banner-content h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    /* === Product Grid === */
+    .featured-products {
+      padding: 40px 20px;
+      background: #97a7ad;
+    }
+
+    .featured-products h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #090808;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      background: #efeaea;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .product-details {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .product-name {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #141414;
+    }
+
+    .product-price {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      color: #141414;
+    }
+
+    .selectors {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    select,
+    input[type="number"] {
+      padding: 6px;
+      border-radius: 5px;
+      border: 1px solid #141414;
+      font-size: 0.9rem;
+    }
+
+    .add-to-cart-btn {
+      background: #111111;
+      color: #f4f0f0;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    .add-to-cart-btn:hover {
+      background: #f10404;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <!-- Logo -->
+      <div class="header-left">
+        <a href="index.html" class="logo-link">
+          <img src="zia.png" alt="Zia Collections Logo" class="logo-img">
+        </a>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="Sales.html" class="nav-link active">Sales</a></li>
+          <li class="nav-item"><a href="NewArrivals.html" class="nav-link active">New Arrivals</a></li>
+          <li class="nav-item"><a href="kids.html" class="nav-link active">Kids</a></li>
+          <li class="nav-item"><a href="women.html" class="nav-link">Women</a></li>
+          <li class="nav-item"><a href="men.html" class="nav-link">Men</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right icons -->
+      <div class="header-right">
+        <button class="icon-btn"><img src="search.png" alt="Search" class="icon-img"></button>
+        <button class="icon-btn"><img src="login.png" alt="Login" class="icon-img"></button>
+        <button class="icon-btn"><img src="cart.png" alt="Cart" class="icon-img"></button>
+      </div>
+    </div>
+  </header>
+
+  <hr class="header-divider">
+
+  <!-- ===== BANNER ===== -->
+  <section class="banner-section kids-banner">
+    <div class="banner-content">
+      <h1>KIDS' COLLECTION</h1>
+      <p>Fun • Playful • Comfortable</p>
+      <a href="#featured" class="shop-now-btn">SHOP NOW</a>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED PRODUCTS ===== -->
+  <section id="featured" class="featured-products">
+    <div class="section-container">
+      <h2>Kids' Featured Products</h2>
+      <div class="product-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card" data-category="Boys">
+          <a href="#"><img src="kids-dress1.png" alt="Boys T-shirt"></a>
+          <div class="product-details">
+            <p class="product-name">Boys Graphic T-Shirt</p>
+            <div class="product-price"><span class="price-amount">Rs. 1200.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: 2Y</option>
+                <option>4Y</option>
+                <option>6Y</option>
+                <option>8Y</option>
+              </select>
+              <select>
+                <option>Color: Black</option>
+                <option>Light Blue</option>
+                <option>Navy Blue</option>
+                <option>Beige</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card" data-category="Girls">
+          <a href="#"><img src="kids-dress2.png" alt="Girls Frock"></a>
+          <div class="product-details">
+            <p class="product-name">Floral Girls Frock</p>
+            <div class="product-price"><span class="price-amount">Rs. 2200.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: 2Y</option>
+                <option>4Y</option>
+                <option>6Y</option>
+                <option>8Y</option>
+              </select>
+              <select>
+                <option>Color: Pink</option>
+                <option>Yellow</option>
+                <option>Purple</option>
+                <option>Navy Blue</option>
+                <option>Beige</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card" data-category="Boys">
+          <a href="#"><img src="kids-shoes.png" alt="Kids Shoes"></a>
+          <div class="product-details">
+            <p class="product-name">t-Shirt</p>
+            <div class="product-price"><span class="price-amount">Rs. 2500.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: 24</option>
+                <option>26</option>
+                <option>28</option>
+              </select>
+              <select>
+                <option>Color: White</option>
+                <option>Black</option>
+                <option>Red</option>
+                <option>Navy Blue</option>
+                <option>Beige</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card" data-category="Winter">
+          <a href="#"><img src="kids-sweater.png" alt="Kids Sweater"></a>
+          <div class="product-details">
+            <p class="product-name">Cozy Kids Sweater</p>
+            <div class="product-price"><span class="price-amount">Rs. 1800.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: 2Y</option>
+                <option>4Y</option>
+                <option>6Y</option>
+              </select>
+              <select>
+                <option>Color: Grey</option>
+                <option>Navy</option>
+                <option>Brown</option>
+                <option>Navy Blue</option>
+                <option>Beige</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+        <!-- Product 5 -->
+        <div class="product-card" data-category="Girls">
+          <a href="#"><img src="kids-dress2.png" alt="Girls Frock"></a>
+          <div class="product-details">
+            <p class="product-name">Floral Girls Frock</p>
+            <div class="product-price"><span class="price-amount">Rs. 2200.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: 2Y</option>
+                <option>4Y</option>
+                <option>6Y</option>
+                <option>8Y</option>
+              </select>
+              <select>
+                <option>Color: Pink</option>
+                <option>Yellow</option>
+                <option>Purple</option>
+                <option>Navy Blue</option>
+                <option>Beige</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+        <!-- Product 6 -->
+        <div class="product-card" data-category="Girls">
+          <a href="#"><img src="kids-dress2.png" alt="Girls Frock"></a>
+          <div class="product-details">
+            <p class="product-name">Floral Girls Frock</p>
+            <div class="product-price"><span class="price-amount">Rs. 2200.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: 2Y</option>
+                <option>4Y</option>
+                <option>6Y</option>
+                <option>8Y</option>
+              </select>
+              <select>
+                <option>Color: Pink</option>
+                <option>Yellow</option>
+                <option>Purple</option>
+                <option>Navy Blue</option>
+                <option>Beige</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+        <!-- Product 7 -->
+        <div class="product-card" data-category="Girls">
+          <a href="#"><img src="kids-dress2.png" alt="Girls Frock"></a>
+          <div class="product-details">
+            <p class="product-name">Floral Girls Frock</p>
+            <div class="product-price"><span class="price-amount">Rs. 2200.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: 2Y</option>
+                <option>4Y</option>
+                <option>6Y</option>
+                <option>8Y</option>
+              </select>
+              <select>
+                <option>Color: Pink</option>
+                <option>Yellow</option>
+                <option>Purple</option>
+                <option>Navy Blue</option>
+                <option>Beige</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+        <!-- Product 8 -->
+        <div class="product-card" data-category="Girls">
+          <a href="#"><img src="kids-dress2.png" alt="Girls Frock"></a>
+          <div class="product-details">
+            <p class="product-name">Floral Girls Frock</p>
+            <div class="product-price"><span class="price-amount">Rs. 2200.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: 2Y</option>
+                <option>4Y</option>
+                <option>6Y</option>
+                <option>8Y</option>
+                <option>Navy Blue</option>
+                <option>Beige</option>
+              </select>
+              <select>
+                <option>Color: Pink</option>
+                <option>Yellow</option>
+                <option>Purple</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+        <!-- Product 9 -->
+        <div class="product-card" data-category="Girls">
+          <a href="#"><img src="kids-dress2.png" alt="Girls Frock"></a>
+          <div class="product-details">
+            <p class="product-name">Floral Girls Frock</p>
+            <div class="product-price"><span class="price-amount">Rs. 2200.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: 2Y</option>
+                <option>4Y</option>
+                <option>6Y</option>
+                <option>8Y</option>
+              </select>
+              <select>
+                <option>Color: Pink</option>
+                <option>Yellow</option>
+                <option>Purple</option>
+                <option>Navy Blue</option>
+                <option>Beige</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+        <!-- Product 10 -->
+        <div class="product-card" data-category="Girls">
+          <a href="#"><img src="kids-dress2.png" alt="Girls Frock"></a>
+          <div class="product-details">
+            <p class="product-name">Floral Girls Frock</p>
+            <div class="product-price"><span class="price-amount">Rs. 2200.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: 2Y</option>
+                <option>4Y</option>
+                <option>6Y</option>
+                <option>8Y</option>
+              </select>
+              <select>
+                <option>Color: Pink</option>
+                <option>Yellow</option>
+                <option>Purple</option>
+                <option>Navy Blue</option>
+                <option>Beige</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+        <!-- Product 11 -->
+        <div class="product-card" data-category="Girls">
+          <a href="#"><img src="kids-dress2.png" alt="Girls Frock"></a>
+          <div class="product-details">
+            <p class="product-name">Floral Girls Frock</p>
+            <div class="product-price"><span class="price-amount">Rs. 2200.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: 2Y</option>
+                <option>4Y</option>
+                <option>6Y</option>
+                <option>8Y</option>
+              </select>
+              <select>
+                <option>Color: Pink</option>
+                <option>Yellow</option>
+                <option>Purple</option>
+                <option>Navy Blue</option>
+                <option>Beige</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+        <!-- Product 12 -->
+        <div class="product-card" data-category="Girls">
+          <a href="#"><img src="kids-dress2.png" alt="Girls Frock"></a>
+          <div class="product-details">
+            <p class="product-name">Floral Girls Frock</p>
+            <div class="product-price"><span class="price-amount">Rs. 2200.00</span></div>
+            <div class="selectors">
+              <select>
+                <option>Size: 2Y</option>
+                <option>4Y</option>
+                <option>6Y</option>
+                <option>8Y</option>
+                <option>Navy Blue</option>
+                <option>Beige</option>
+              </select>
+              <select>
+                <option>Color: Pink</option>
+                <option>Yellow</option>
+                <option>Purple</option>
+                <option>Navy Blue</option>
+                <option>Beige</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-column">
+        <h3>HELP</h3>
+        <ul>
+          <li><a href="#">EXCHANGE & RETURN</a></li>
+          <li><a href="#">FAQ'S</a></li>
+          <li><a href="#">CONTACT US</a></li>
+          <li><a href="#">TERMS & CONDITIONS</a></li>
+          <li><a href="#">PRIVACY POLICIES</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>MORE ABOUT ZIA COLLECTIONS</h3>
+        <ul>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">STORE LOCATOR</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="social-links">
+        <a href="#"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="twitter.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </footer>
+  <div class="bottom-footer-text">
+    <p>All Rights Reserved. © 2024 ZIA Collections</p>
+  </div>
+</body>
+</html>
