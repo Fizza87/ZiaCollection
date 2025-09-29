@@ -9,7 +9,7 @@
   <style>
     /* === Banner === */
     .women-banner {
-      background: url('women-banner.jpg') center/cover no-repeat;
+      background: url('womenbanner.png') center/cover no-repeat;
       height: 300px;
       display: flex;
       align-items: center;
@@ -26,7 +26,7 @@
     /* === Product Grid === */
     .featured-products {
       padding: 40px 20px;
-      background: #eccab7;
+      background: #f0e5ca;
     }
 
     .featured-products h2 {
@@ -70,7 +70,7 @@
       font-size: 1.1rem;
       font-weight: bold;
       margin-bottom: 8px;
-      color:#141414;
+      color: #141414;
     }
 
     .product-price {
@@ -126,8 +126,8 @@
       <nav class="main-nav">
         <ul class="nav-list">
           <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="Sales.html" class="nav-link active">Sales</a></li>
-          <li class="nav-item"><a href="NewArrivals.html" class="nav-link active">New Arrivals</a></li>
+          <li class="nav-item"><a href="Sales.html" class="nav-link">Sales</a></li>
+          <li class="nav-item"><a href="NewArrivals.html" class="nav-link">New Arrivals</a></li>
           <li class="nav-item"><a href="kids.html" class="nav-link">Kids</a></li>
           <li class="nav-item"><a href="women.html" class="nav-link active">Women</a></li>
           <li class="nav-item"><a href="men.html" class="nav-link">Men</a></li>
@@ -149,7 +149,7 @@
   <section class="banner-section women-banner">
     <div class="banner-content">
       <h1>WOMEN'S COLLECTION</h1>
-      <p>Trendy • Elegant • Comfortable</p>
+      <p>Elegant • Stylish • Modern</p>
       <a href="#featured" class="shop-now-btn">SHOP NOW</a>
     </div>
   </section>
@@ -159,22 +159,22 @@
     <div class="section-container">
       <h2>Women's Featured Products</h2>
       <div class="product-grid">
-        
-        <!-- Product Template -->
-        <div class="product-card" data-category="Dresses">
-          <a href="#"><img src="dress1.png" alt="Floral Dress"></a>
+
+        <!-- Dresses -->
+        <div class="product-card" data-category="dresses">
+          <img src="w1.png" alt="Dress">
           <div class="product-details">
-            <p class="product-name">Floral Maxi Dress</p>
-            <div class="product-price"><span class="price-amount">Rs. 3500.00</span></div>
+            <p class="product-name">Elegant Floral Dress</p>
+            <div class="product-price">Rs. 5500</div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
                 <option>M</option>
                 <option>L</option>
-                <option>XL</option>
               </select>
               <select>
                 <option>Color: Red</option>
+                <option>Black</option>
                 <option>Blue</option>
                 <option>Green</option>
               </select>
@@ -184,18 +184,105 @@
           </div>
         </div>
 
-        <!-- Product 2 -->
-        <div class="product-card" data-category="Tops">
-          <a href="#"><img src="top1.png" alt="Casual Top"></a>
+        <div class="product-card" data-category="dresses">
+          <img src="w2.png" alt="Dress">
           <div class="product-details">
-            <p class="product-name">Casual Summer Top</p>
-            <div class="product-price"><span class="price-amount">Rs. 1800.00</span></div>
+            <p class="product-name">Casual Floral Dress</p>
+            <div class="product-price">Rs. 4000</div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
                 <option>M</option>
                 <option>L</option>
-                <option>XL</option>
+              </select>
+              <select>
+                <option>Color: Pink</option>
+                <option>Yellow</option>
+                <option>White</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="dresses">
+          <img src="w3.png" alt="Dress">
+          <div class="product-details">
+            <p class="product-name">Party Wear Dress</p>
+            <div class="product-price">Rs. 6000</div>
+            <div class="selectors">
+              <select>
+                <option>Size: S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Color: Gold</option>
+                <option>Silver</option>
+                <option>Black</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="dresses">
+          <img src="w4.png" alt="Dress">
+          <div class="product-details">
+            <p class="product-name">Summer Cotton Dress</p>
+            <div class="product-price">Rs. 3500</div>
+            <div class="selectors">
+              <select>
+                <option>Size: S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Color: White</option>
+                <option>Orange</option>
+                <option>Blue</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <!-- Tops -->
+        <div class="product-card" data-category="tops">
+          <img src="w5.png" alt="Top">
+          <div class="product-details">
+            <p class="product-name">Casual Women Top</p>
+            <div class="product-price">Rs. 2200</div>
+            <div class="selectors">
+              <select>
+                <option>Size: S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Color: Black</option>
+                <option>Red</option>
+                <option>Blue</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="tops">
+          <img src="w6.png" alt="Top">
+          <div class="product-details">
+            <p class="product-name">Striped Cotton Top</p>
+            <div class="product-price">Rs. 2500</div>
+            <div class="selectors">
+              <select>
+                <option>Size: S</option>
+                <option>M</option>
+                <option>L</option>
               </select>
               <select>
                 <option>Color: White</option>
@@ -208,12 +295,56 @@
           </div>
         </div>
 
-        <!-- Product 3 -->
-        <div class="product-card" data-category="Bottoms">
-          <a href="#"><img src="pant1.png" alt="Stylish Pants"></a>
+        <div class="product-card" data-category="tops">
+          <img src="w7.png" alt="Top">
           <div class="product-details">
-            <p class="product-name">Stylish Wide Pants</p>
-            <div class="product-price"><span class="price-amount">Rs. 2500.00</span></div>
+            <p class="product-name">Printed Summer Top</p>
+            <div class="product-price">Rs. 2700</div>
+            <div class="selectors">
+              <select>
+                <option>Size: S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Color: Blue</option>
+                <option>Yellow</option>
+                <option>Black</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <div class="product-card" data-category="tops">
+          <img src="w8.png" alt="Top">
+          <div class="product-details">
+            <p class="product-name">Formal Women Top</p>
+            <div class="product-price">Rs. 3000</div>
+            <div class="selectors">
+              <select>
+                <option>Size: S</option>
+                <option>M</option>
+                <option>L</option>
+              </select>
+              <select>
+                <option>Color: Grey</option>
+                <option>White</option>
+                <option>Black</option>
+              </select>
+              <input type="number" min="1" value="1">
+            </div>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+          </div>
+        </div>
+
+        <!-- Trousers -->
+        <div class="product-card" data-category="trousers">
+          <img src="w9.png" alt="Trousers">
+          <div class="product-details">
+            <p class="product-name">Slim Fit Trousers</p>
+            <div class="product-price">Rs. 3200</div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -222,7 +353,7 @@
               </select>
               <select>
                 <option>Color: Black</option>
-                <option>Beige</option>
+                <option>White</option>
                 <option>Blue</option>
               </select>
               <input type="number" min="1" value="1">
@@ -231,12 +362,11 @@
           </div>
         </div>
 
-        <!-- Product 4 -->
-        <div class="product-card" data-category="Traditional">
-          <a href="#"><img src="kurta1.png" alt="Kurta"></a>
+        <div class="product-card" data-category="trousers">
+          <img src="w10.png" alt="Trousers">
           <div class="product-details">
-            <p class="product-name">Elegant Kurta</p>
-            <div class="product-price"><span class="price-amount">Rs. 3000.00</span></div>
+            <p class="product-name">Casual Cotton Trousers</p>
+            <div class="product-price">Rs. 2800</div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -244,9 +374,9 @@
                 <option>L</option>
               </select>
               <select>
-                <option>Color: White</option>
+                <option>Color: Brown</option>
+                <option>Beige</option>
                 <option>Black</option>
-                <option>Maroon</option>
               </select>
               <input type="number" min="1" value="1">
             </div>
@@ -254,13 +384,11 @@
           </div>
         </div>
 
-        <!-- Product 5 -->
-        <!-- Product 4 -->
-        <div class="product-card" data-category="Traditional">
-          <a href="#"><img src="kurta1.png" alt="Kurta"></a>
+        <div class="product-card" data-category="trousers">
+          <img src="w11.png" alt="Trousers">
           <div class="product-details">
-            <p class="product-name">Elegant Kurta</p>
-            <div class="product-price"><span class="price-amount">Rs. 3000.00</span></div>
+            <p class="product-name">High Waist Trousers</p>
+            <div class="product-price">Rs. 3500</div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -268,9 +396,9 @@
                 <option>L</option>
               </select>
               <select>
-                <option>Color: White</option>
-                <option>Black</option>
-                <option>Maroon</option>
+                <option>Color: Black</option>
+                <option>Green</option>
+                <option>White</option>
               </select>
               <input type="number" min="1" value="1">
             </div>
@@ -278,13 +406,11 @@
           </div>
         </div>
 
-        <!-- Product 6 -->
-        <!-- Product 4 -->
-        <div class="product-card" data-category="Traditional">
-          <a href="#"><img src="kurta1.png" alt="Kurta"></a>
+        <div class="product-card" data-category="trousers">
+          <img src="w12.png" alt="Trousers">
           <div class="product-details">
-            <p class="product-name">Elegant Kurta</p>
-            <div class="product-price"><span class="price-amount">Rs. 3000.00</span></div>
+            <p class="product-name">Formal Trousers</p>
+            <div class="product-price">Rs. 3700</div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -292,9 +418,9 @@
                 <option>L</option>
               </select>
               <select>
-                <option>Color: White</option>
+                <option>Color: Blue</option>
+                <option>Grey</option>
                 <option>Black</option>
-                <option>Maroon</option>
               </select>
               <input type="number" min="1" value="1">
             </div>
@@ -302,23 +428,22 @@
           </div>
         </div>
 
-        <!-- Product 7 -->
-        <!-- Product 4 -->
-        <div class="product-card" data-category="Traditional">
-          <a href="#"><img src="kurta1.png" alt="Kurta"></a>
+        <!-- Jeans -->
+        <div class="product-card" data-category="pants">
+          <img src="w13.png" alt="Pants">
           <div class="product-details">
-            <p class="product-name">Elegant Kurta</p>
-            <div class="product-price"><span class="price-amount">Rs. 3000.00</span></div>
+            <p class="product-name">Blue Pants</p>
+            <div class="product-price">Rs. 4000</div>
             <div class="selectors">
               <select>
-                <option>Size: S</option>
-                <option>M</option>
-                <option>L</option>
+                <option>Size: 28</option>
+                <option>30</option>
+                <option>32</option>
               </select>
               <select>
-                <option>Color: White</option>
+                <option>Color: Blue</option>
                 <option>Black</option>
-                <option>Maroon</option>
+                <option>Grey</option>
               </select>
               <input type="number" min="1" value="1">
             </div>
@@ -326,23 +451,21 @@
           </div>
         </div>
 
-        <!-- Product 8 -->
-        <!-- Product 4 -->
-        <div class="product-card" data-category="Traditional">
-          <a href="#"><img src="kurta1.png" alt="Kurta"></a>
+        <div class="product-card" data-category="pants">
+          <img src="w14.png" alt="Pants">
           <div class="product-details">
-            <p class="product-name">Elegant Kurta</p>
-            <div class="product-price"><span class="price-amount">Rs. 3000.00</span></div>
+            <p class="product-name">Ripped Women Pants</p>
+            <div class="product-price">Rs. 4200</div>
             <div class="selectors">
               <select>
-                <option>Size: S</option>
-                <option>M</option>
-                <option>L</option>
+                <option>Size: 28</option>
+                <option>30</option>
+                <option>32</option>
               </select>
               <select>
-                <option>Color: White</option>
-                <option>Black</option>
-                <option>Maroon</option>
+                <option>Color: Black</option>
+                <option>Blue</option>
+                <option>Grey</option>
               </select>
               <input type="number" min="1" value="1">
             </div>
@@ -350,23 +473,21 @@
           </div>
         </div>
 
-        <!-- Product 9 -->
-        <!-- Product 4 -->
-        <div class="product-card" data-category="Traditional">
-          <a href="#"><img src="kurta1.png" alt="Kurta"></a>
+        <div class="product-card" data-category="pants">
+          <img src="w15.png" alt="Pants">
           <div class="product-details">
-            <p class="product-name">Elegant Kurta</p>
-            <div class="product-price"><span class="price-amount">Rs. 3000.00</span></div>
+            <p class="product-name">Classic Fit Pants</p>
+            <div class="product-price">Rs. 3900</div>
             <div class="selectors">
               <select>
-                <option>Size: S</option>
-                <option>M</option>
-                <option>L</option>
+                <option>Size: 28</option>
+                <option>30</option>
+                <option>32</option>
               </select>
               <select>
-                <option>Color: White</option>
+                <option>Color: Blue</option>
                 <option>Black</option>
-                <option>Maroon</option>
+                <option>White</option>
               </select>
               <input type="number" min="1" value="1">
             </div>
@@ -374,78 +495,372 @@
           </div>
         </div>
 
-        <!-- Product 10 -->
-        <!-- Product 4 -->
-        <div class="product-card" data-category="Traditional">
-          <a href="#"><img src="kurta1.png" alt="Kurta"></a>
+        <div class="product-card" data-category="pants">
+          <img src="w16.png" alt="Pants">
           <div class="product-details">
-            <p class="product-name">Elegant Kurta</p>
-            <div class="product-price"><span class="price-amount">Rs. 3000.00</span></div>
+            <p class="product-name">High Rise Pants</p>
+            <div class="product-price">Rs. 4500</div>
             <div class="selectors">
               <select>
-                <option>Size: S</option>
-                <option>M</option>
-                <option>L</option>
+                <option>Size: 28</option>
+                <option>30</option>
+                <option>32</option>
               </select>
               <select>
-                <option>Color: White</option>
+                <option>Color: Grey</option>
+                <option>Blue</option>
                 <option>Black</option>
-                <option>Maroon</option>
               </select>
               <input type="number" min="1" value="1">
             </div>
             <button class="add-to-cart-btn">ADD TO CART</button>
           </div>
         </div>
+        <!-- Tights -->
+<div class="product-card" data-category="tights">
+  <img src="ti1.png" alt="Tights">
+  <div class="product-details">
+    <p class="product-name">Stretch Fit Tights</p>
+    <div class="product-price">Rs. 2200</div>
+    <div class="selectors">
+      <select>
+        <option>Size: S</option>
+        <option>M</option>
+        <option>L</option>
+      </select>
+      <select>
+        <option>Color: Black</option>
+        <option>Grey</option>
+        <option>Blue</option>
+      </select>
+      <input type="number" min="1" value="1">
+    </div>
+    <button class="add-to-cart-btn">ADD TO CART</button>
+  </div>
+</div>
 
-        <!-- Product 11 -->
-        <!-- Product 4 -->
-        <div class="product-card" data-category="Traditional">
-          <a href="#"><img src="kurta1.png" alt="Kurta"></a>
-          <div class="product-details">
-            <p class="product-name">Elegant Kurta</p>
-            <div class="product-price"><span class="price-amount">Rs. 3000.00</span></div>
-            <div class="selectors">
-              <select>
-                <option>Size: S</option>
-                <option>M</option>
-                <option>L</option>
-              </select>
-              <select>
-                <option>Color: White</option>
-                <option>Black</option>
-                <option>Maroon</option>
-              </select>
-              <input type="number" min="1" value="1">
-            </div>
-            <button class="add-to-cart-btn">ADD TO CART</button>
-          </div>
-        </div>
+<div class="product-card" data-category="tights">
+  <img src="ti2.png" alt="Tights">
+  <div class="product-details">
+    <p class="product-name">Casual Cotton Tights</p>
+    <div class="product-price">Rs. 2000</div>
+    <div class="selectors">
+      <select>
+        <option>Size: S</option>
+        <option>M</option>
+        <option>L</option>
+      </select>
+      <select>
+        <option>Color: White</option>
+        <option>Black</option>
+        <option>Pink</option>
+      </select>
+      <input type="number" min="1" value="1">
+    </div>
+    <button class="add-to-cart-btn">ADD TO CART</button>
+  </div>
+</div>
 
-        <!-- Product 12 -->
-        <!-- Product 4 -->
-        <div class="product-card" data-category="Traditional">
-          <a href="#"><img src="kurta1.png" alt="Kurta"></a>
-          <div class="product-details">
-            <p class="product-name">Elegant Kurta</p>
-            <div class="product-price"><span class="price-amount">Rs. 3000.00</span></div>
-            <div class="selectors">
-              <select>
-                <option>Size: S</option>
-                <option>M</option>
-                <option>L</option>
-              </select>
-              <select>
-                <option>Color: White</option>
-                <option>Black</option>
-                <option>Maroon</option>
-              </select>
-              <input type="number" min="1" value="1">
-            </div>
-            <button class="add-to-cart-btn">ADD TO CART</button>
-          </div>
-        </div>
+<div class="product-card" data-category="tights">
+  <img src="ti3.png" alt="Tights">
+  <div class="product-details">
+    <p class="product-name">Printed Stretch Tights</p>
+    <div class="product-price">Rs. 2500</div>
+    <div class="selectors">
+      <select>
+        <option>Size: S</option>
+        <option>M</option>
+        <option>L</option>
+      </select>
+      <select>
+        <option>Color: Red</option>
+        <option>Black</option>
+        <option>Blue</option>
+      </select>
+      <input type="number" min="1" value="1">
+    </div>
+    <button class="add-to-cart-btn">ADD TO CART</button>
+  </div>
+</div>
 
+<div class="product-card" data-category="tights">
+  <img src="ti4.png" alt="Tights">
+  <div class="product-details">
+    <p class="product-name">Slim Fit Tights</p>
+    <div class="product-price">Rs. 2400</div>
+    <div class="selectors">
+      <select>
+        <option>Size: S</option>
+        <option>M</option>
+        <option>L</option>
+      </select>
+      <select>
+        <option>Color: Grey</option>
+        <option>Black</option>
+        <option>Brown</option>
+      </select>
+      <input type="number" min="1" value="1">
+    </div>
+    <button class="add-to-cart-btn">ADD TO CART</button>
+  </div>
+</div>
+<!-- Traditional Wear -->
+<div class="product-card" data-category="traditional">
+  <img src="tw1.png" alt="Traditional Wear">
+  <div class="product-details">
+    <p class="product-name">Embroidered Kurta</p>
+    <div class="product-price">Rs. 5000</div>
+    <div class="selectors">
+      <select>
+        <option>Size: S</option>
+        <option>M</option>
+        <option>L</option>
+      </select>
+      <select>
+        <option>Color: White</option>
+        <option>Black</option>
+        <option>Blue</option>
+      </select>
+      <input type="number" min="1" value="1">
+    </div>
+    <button class="add-to-cart-btn">ADD TO CART</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="traditional">
+  <img src="tw2.png" alt="Traditional Wear">
+  <div class="product-details">
+    <p class="product-name">Classic Shalwar Kameez</p>
+    <div class="product-price">Rs. 4500</div>
+    <div class="selectors">
+      <select>
+        <option>Size: S</option>
+        <option>M</option>
+        <option>L</option>
+      </select>
+      <select>
+        <option>Color: Beige</option>
+        <option>White</option>
+        <option>Black</option>
+      </select>
+      <input type="number" min="1" value="1">
+    </div>
+    <button class="add-to-cart-btn">ADD TO CART</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="traditional">
+  <img src="tw3.png" alt="Traditional Wear">
+  <div class="product-details">
+    <p class="product-name">Silk Traditional Outfit</p>
+    <div class="product-price">Rs. 6000</div>
+    <div class="selectors">
+      <select>
+        <option>Size: S</option>
+        <option>M</option>
+        <option>L</option>
+      </select>
+      <select>
+        <option>Color: Green</option>
+        <option>Gold</option>
+        <option>Red</option>
+      </select>
+      <input type="number" min="1" value="1">
+    </div>
+    <button class="add-to-cart-btn">ADD TO CART</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="traditional">
+  <img src="tw4.png" alt="Traditional Wear">
+  <div class="product-details">
+    <p class="product-name">Festive Wear Kurta</p>
+    <div class="product-price">Rs. 5200</div>
+    <div class="selectors">
+      <select>
+        <option>Size: S</option>
+        <option>M</option>
+        <option>L</option>
+      </select>
+      <select>
+        <option>Color: Maroon</option>
+        <option>Black</option>
+        <option>White</option>
+      </select>
+      <input type="number" min="1" value="1">
+    </div>
+    <button class="add-to-cart-btn">ADD TO CART</button>
+  </div>
+</div>
+
+<!-- Shawl -->
+<div class="product-card" data-category="shawl">
+  <img src="sh1.png" alt="Shawl">
+  <div class="product-details">
+    <p class="product-name">Woolen Winter Shawl</p>
+    <div class="product-price">Rs. 3200</div>
+    <div class="selectors">
+      <select>
+        <option>Size: Standard</option>
+      </select>
+      <select>
+        <option>Color: Brown</option>
+        <option>Gray</option>
+        <option>Black</option>
+      </select>
+      <input type="number" min="1" value="1">
+    </div>
+    <button class="add-to-cart-btn">ADD TO CART</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="shawl">
+  <img src="sh2.png" alt="Shawl">
+  <div class="product-details">
+    <p class="product-name">Pashmina Embroidered Shawl</p>
+    <div class="product-price">Rs. 4500</div>
+    <div class="selectors">
+      <select>
+        <option>Size: Standard</option>
+      </select>
+      <select>
+        <option>Color: Maroon</option>
+        <option>Beige</option>
+        <option>Green</option>
+      </select>
+      <input type="number" min="1" value="1">
+    </div>
+    <button class="add-to-cart-btn">ADD TO CART</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="shawl">
+  <img src="sh3.png" alt="Shawl">
+  <div class="product-details">
+    <p class="product-name">Cashmere Classic Shawl</p>
+    <div class="product-price">Rs. 5000</div>
+    <div class="selectors">
+      <select>
+        <option>Size: Standard</option>
+      </select>
+      <select>
+        <option>Color: White</option>
+        <option>Blue</option>
+        <option>Black</option>
+      </select>
+      <input type="number" min="1" value="1">
+    </div>
+    <button class="add-to-cart-btn">ADD TO CART</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="shawl">
+  <img src="sh4.png" alt="Shawl">
+  <div class="product-details">
+    <p class="product-name">Designer Party Shawl</p>
+    <div class="product-price">Rs. 6000</div>
+    <div class="selectors">
+      <select>
+        <option>Size: Standard</option>
+      </select>
+      <select>
+        <option>Color: Red</option>
+        <option>Gold</option>
+        <option>Black</option>
+      </select>
+      <input type="number" min="1" value="1">
+    </div>
+    <button class="add-to-cart-btn">ADD TO CART</button>
+  </div>
+</div>
+<!-- Jackets -->
+<div class="product-card" data-category="jackets">
+  <img src="WJ1.png" alt="Jacket">
+  <div class="product-details">
+    <p class="product-name">Denim Casual Jacket</p>
+    <div class="product-price">Rs. 4500</div>
+    <div class="selectors">
+      <select>
+        <option>Size: S</option>
+        <option>M</option>
+        <option>L</option>
+      </select>
+      <select>
+        <option>Color: Blue</option>
+        <option>Black</option>
+        <option>Gray</option>
+      </select>
+      <input type="number" min="1" value="1">
+    </div>
+    <button class="add-to-cart-btn">ADD TO CART</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="jackets">
+  <img src="WJ2.png" alt="Jacket">
+  <div class="product-details">
+    <p class="product-name">Leather Formal Jacket</p>
+    <div class="product-price">Rs. 8500</div>
+    <div class="selectors">
+      <select>
+        <option>Size: S</option>
+        <option>M</option>
+        <option>L</option>
+      </select>
+      <select>
+        <option>Color: Black</option>
+        <option>Brown</option>
+        <option>Tan</option>
+      </select>
+      <input type="number" min="1" value="1">
+    </div>
+    <button class="add-to-cart-btn">ADD TO CART</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="jackets">
+  <img src="WJ3.png" alt="Jacket">
+  <div class="product-details">
+    <p class="product-name">Winter Puffer Jacket</p>
+    <div class="product-price">Rs. 6000</div>
+    <div class="selectors">
+      <select>
+        <option>Size: S</option>
+        <option>M</option>
+        <option>L</option>
+      </select>
+      <select>
+        <option>Color: Gray</option>
+        <option>Navy</option>
+        <option>Black</option>
+      </select>
+      <input type="number" min="1" value="1">
+    </div>
+    <button class="add-to-cart-btn">ADD TO CART</button>
+  </div>
+</div>
+
+<div class="product-card" data-category="jackets">
+  <img src="WJ4.png" alt="Jacket">
+  <div class="product-details">
+    <p class="product-name">Trendy Bomber Jacket</p>
+    <div class="product-price">Rs. 5200</div>
+    <div class="selectors">
+      <select>
+        <option>Size: S</option>
+        <option>M</option>
+        <option>L</option>
+      </select>
+      <select>
+        <option>Color: Olive</option>
+        <option>Black</option>
+        <option>Blue</option>
+      </select>
+      <input type="number" min="1" value="1">
+       </div>
+       <button class="add-to-cart-btn">ADD TO CART</button>
+     </div>
+     </div>
       </div>
     </div>
   </section>
@@ -483,5 +898,42 @@
   <div class="bottom-footer-text">
     <p>All Rights Reserved. © 2024 ZIA Collections</p>
   </div>
+
+  <!-- Filter JS -->
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const productCards = document.querySelectorAll(".product-card");
+    const categoryLinks = document.querySelectorAll(".category-link");
+
+    function showCategory(category) {
+      productCards.forEach(card => {
+        if (category === "all" || card.dataset.category === category) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+
+    // Check if ?category=... is in URL
+    const params = new URLSearchParams(window.location.search);
+    const initialCategory = params.get("category") || "all";
+    showCategory(initialCategory);
+
+    // Handle clicks on filter links
+    categoryLinks.forEach(link => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+        const selectedCategory = link.dataset.category;
+        showCategory(selectedCategory);
+
+        // Update URL without reload
+        const newUrl = `${window.location.pathname}?category=${selectedCategory}`;
+        window.history.pushState({ path: newUrl }, "", newUrl);
+      });
+    });
+  });
+</script>
+
 </body>
 </html>

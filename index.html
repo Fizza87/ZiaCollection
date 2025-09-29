@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Zia Collections</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -36,46 +38,47 @@
                     <li class="nav-item has-dropdown">
                         <a href="#" class="nav-link">New Arrivals</a>
                         <ul class="dropdown">
-                            <li><a href="#" class="dd-link">Latest Dresses</a></li>
+                            <li><a href="#" class="dd-link">Latest Skirts</a></li>
                             <li><a href="#" class="dd-link">New T-shirts</a></li>
                             <li><a href="#" class="dd-link">New Jeans</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item has-dropdown">
-                        <a class="nav-link" href="#">Kids</a>
+                        <a class="nav-link" href="kids.html">Kids</a>
                         <ul class="dropdown">
-                            <li><a class="dd-link" href="#">Frocks</a></li>
-                            <li><a class="dd-link" href="#">Trousers</a></li>
-                            <li><a class="dd-link" href="#">Shirts</a></li>
-                            <li><a class="dd-link" href="#">Jeans</a></li>
+                            <li><a class="dd-link" href="kids.html?category=frocks">Frocks</a></li>
+                            <li><a class="dd-link" href="kids.html?category=trousers">Trousers</a></li>
+                            <li><a class="dd-link" href="kids.html?category=shirts">Shirts</a></li>
+                            <li><a class="dd-link" href="kids.html?category=jeans">Jeans</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item has-dropdown">
-                        <a class="nav-link" href="#">Women</a>
+                        <a class="nav-link" href="women.html">Women</a>
                         <ul class="dropdown">
-                            <li><a class="dd-link" href="#">Dresses</a></li>
-                            <li><a class="dd-link" href="#">Tops</a></li>
-                            <li><a class="dd-link" href="#">Bottoms</a></li>
-                            <li><a class="dd-link" href="#">Traditional Wear</a></li>
-                            <li><a class="dd-link" href="#">Tights</a></li>
-                            <li><a class="dd-link" href="#">Pants</a></li>
-                            <li><a class="dd-link" href="#">Shalwar</a></li>
-                            <li><a class="dd-link" href="#">Shawl</a></li>
-                            <li><a class="dd-link" href="#">Jackets</a></li>
+                            <li><a class="dd-link" href="women.html?category=dresses">Dresses</a></li>
+                            <li><a class="dd-link" href="women.html?category=tops">Tops</a></li>
+                            <li><a class="dd-link" href="women.html?category=trousers">Trousers</a></li>
+                            <li><a class="dd-link" href="women.html?category=traditional-wear">Traditional Wear</a></li>
+                            <li><a class="dd-link" href="women.html?category=tights">Tights</a></li>
+                            <li><a class="dd-link" href="women.html?category=pants">Pants</a></li>
+
+                            <li><a class="dd-link" href="women.html?category=shawl">Shawl</a></li>
+                            <li><a class="dd-link" href="women.html?category=jackets">Jackets</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item has-dropdown">
-                        <a class="nav-link" href="#">Men</a>
+                        <a class="nav-link" href="men.html">Men</a>
                         <ul class="dropdown">
-                            <li><a class="dd-link" href="#">Shirts</a></li>
-                            <li><a class="dd-link" href="#">Trousers</a></li>
-                            <li><a class="dd-link" href="#">Kurta</a></li>
-                            <li><a class="dd-link" href="#">Suits</a></li>
-                            <li><a class="dd-link" href="#">Pants</a></li>
-                            <li><a class="dd-link" href="#">Jackets</a></li>
+                            <li><a class="dd-link" href="men.html?category=shirts">Shirts</a></li>
+                            <li><a class="dd-link" href="men.html?category=tshirts">T-shirts</a></li>
+                            <li><a class="dd-link" href="men.html?category=trousers">Trousers</a></li>
+                            <li><a class="dd-link" href="men.html?category=kurta">Kurta</a></li>
+                            <li><a class="dd-link" href="men.html?category=suits">Suits</a></li>
+                            <li><a class="dd-link" href="men.html?category=jeans">Jeans</a></li>
+                            <li><a class="dd-link" href="men.html?category=jackets">Jackets</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -86,9 +89,11 @@
                 <button class="icon-btn" aria-label="Search">
                     <img src="search.png" alt="Search" class="icon-img">
                 </button>
-                <button class="icon-btn" aria-label="Account">
-                    <img src="login.png" alt="Login" class="icon-img">
+
+                <button class="icon-btn" onclick="openLogin()">
+                     <img src="login.png" alt="Login" class="icon-img">
                 </button>
+
                 <button class="icon-btn" aria-label="Cart">
                     <img src="cart.png" alt="Cart" class="icon-img">
                 </button>
@@ -132,73 +137,152 @@
             </a>
         </div>
     </section>
-
     <!-- ===== FEATURED PRODUCTS ===== -->
-    <section class="featured-products">
-        <div class="section-container">
-            <h2>Featured Products</h2>
-            <div class="filter-buttons">
-            <button data-category="all" class="filter-btn active"><span>All</span></button>
-            <button data-category="Shirts" class="filter-btn"><span>Shirts</span></button>
-            <button data-category="Skirts" class="filter-btn"><span>Skirts</span></button>
-            <button data-category="Jeans" class="filter-btn"><span>Jeans</span></button>
+<section class="featured-products">
+  <div class="section-container">
+    <h2>Featured Products</h2>
 
+    <!-- Filter Buttons -->
+      <div class="filter-buttons">
+         <button data-category="skirts" class="filter-btn"><span>Skirts</span></button>
+         <button data-category="shirts" class="filter-btn"><span>Shirts</span></button>
+         <button data-category="jeans" class="filter-btn"><span>Jeans</span></button>
+         <button data-category="all" class="filter-btn active"><span>All</span></button>
+      </div>
+
+
+    <!-- Product Grid -->
+    <div class="product-grid">
+      
+      <!-- Skirts Category -->
+      <div class="product-card" data-category="skirts">
+        <a href="#"><img src="sk1.png" alt="Floral Midi Skirt"></a>
+        <div class="product-details">
+          <p class="product-name">Floral Midi Skirt</p>
+          <p class="product-desc">A breezy floral midi skirt, perfect for summer brunches.</p>
+          <div class="product-price"><span class="price-amount">Rs. 2,950</span></div>
+          <button class="add-to-cart-btn">ADD TO CART</button>
         </div>
-            <div class="product-grid">
-                <div class="product-card">
-                    <a href="#">
-                        <img src="T3.png" alt="Check Shirt">
-                    </a>
-                    <div class="product-details">
-                        <p class="product-name">Check Shirt</p>
-                        <div class="product-price">
-                            <span class="price-amount">Rs. 2000.00</span>
-                        </div>
-                        <button class="add-to-cart-btn">ADD TO CART</button>
-                    </div>
-                </div>
+      </div>
 
-                <div class="product-card">
-                    <a href="#">
-                        <img src="S1.png" alt="Light blue Jeans">
-                    </a>
-                    <div class="product-details">
-                        <p class="product-name">Light blue Wide Jeans</p>
-                        <div class="product-price">
-                            <span class="price-amount">Rs. 2500.00</span>
-                        </div>
-                        <button class="add-to-cart-btn">ADD TO CART</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <a href="#">
-                        <img src="p3.png" alt="Blackish Grey">
-                    </a>
-                    <div class="product-details">
-                        <p class="product-name">Blackish Grey Jeans</p>
-                        <div class="product-price">
-                            <span class="price-amount">Rs. 2800.00</span>
-                        </div>
-                        <button class="add-to-cart-btn">ADD TO CART</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <a href="#">
-                        <img src="p4.png" alt="Blue Grey">
-                    </a>
-                    <div class="product-details">
-                        <p class="product-name">Blackish Grey Jeans</p>
-                        <div class="product-price">
-                            <span class="price-amount">Rs. 2800.00</span>
-                        </div>
-                        <button class="add-to-cart-btn">ADD TO CART</button>
-                    </div>
-                </div>
-            </div>
+      <div class="product-card" data-category="skirts">
+        <a href="#"><img src="sk2.png" alt="Denim A-Line Skirt"></a>
+        <div class="product-details">
+          <p class="product-name">Denim A-Line Skirt</p>
+          <p class="product-desc">Classic blue denim skirt with an A-line cut for a casual chic look.</p>
+          <div class="product-price"><span class="price-amount">Rs. 3,200</span></div>
+          <button class="add-to-cart-btn">ADD TO CART</button>
         </div>
-    </section>
+      </div>
+
+      <div class="product-card" data-category="skirts">
+        <a href="#"><img src="sk3.png" alt="Pleated Long Skirt"></a>
+        <div class="product-details">
+          <p class="product-name">Pleated Long Skirt</p>
+          <p class="product-desc">Elegant pleated skirt, suitable for office wear or dinners.</p>
+          <div class="product-price"><span class="price-amount">Rs. 4,100</span></div>
+          <button class="add-to-cart-btn">ADD TO CART</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="skirts">
+        <a href="#"><img src="sk4.png" alt="High-Waist Pencil Skirt"></a>
+        <div class="product-details">
+          <p class="product-name">High-Waist Pencil Skirt</p>
+          <p class="product-desc">Sleek high-waist pencil skirt, ideal for formal looks.</p>
+          <div class="product-price"><span class="price-amount">Rs. 3,850</span></div>
+          <button class="add-to-cart-btn">ADD TO CART</button>
+        </div>
+      </div>
+
+
+      <!-- Shirts Category -->
+      <div class="product-card" data-category="shirts">
+        <a href="#"><img src="S1.png" alt="Check Pink Shirt"></a>
+        <div class="product-details">
+          <p class="product-name">Check Pink Shirt</p>
+          <p class="product-desc">Timeless cotton check pink shirt, perfect for casual and office wear.</p>
+          <div class="product-price"><span class="price-amount">Rs. 2,500</span></div>
+          <button class="add-to-cart-btn">ADD TO CART</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="shirts">
+        <a href="#"><img src="S2.png" alt="Plain Shirt"></a>
+        <div class="product-details">
+          <p class="product-name">Plain Shirt</p>
+          <p class="product-desc">Trendy plain shirt for everyday comfort and style.</p>
+          <div class="product-price"><span class="price-amount">Rs. 2,800</span></div>
+          <button class="add-to-cart-btn">ADD TO CART</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="shirts">
+        <a href="#"><img src="S3.png" alt="Brown Shirt"></a>
+        <div class="product-details">
+          <p class="product-name">Brown Shirt</p>
+          <p class="product-desc">Lightweight brown shirt, ideal for a smart-casual look.</p>
+          <div class="product-price"><span class="price-amount">Rs. 3,100</span></div>
+          <button class="add-to-cart-btn">ADD TO CART</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="shirts">
+        <a href="#"><img src="S4.png" alt="Polo Shirt"></a>
+        <div class="product-details">
+          <p class="product-name">Polo Shirt</p>
+          <p class="product-desc">Polo shirt tailored for meetings and events.</p>
+          <div class="product-price"><span class="price-amount">Rs. 3,400</span></div>
+          <button class="add-to-cart-btn">ADD TO CART</button>
+        </div>
+      </div>
+
+
+      <!-- Jeans Category -->
+      <div class="product-card" data-category="jeans">
+        <a href="#"><img src="J1.png" alt="Printed Jeans"></a>
+        <div class="product-details">
+          <p class="product-name">Printed Jeans</p>
+          <p class="product-desc">Stylish printed jeans designed for comfort and style.</p>
+          <div class="product-price"><span class="price-amount">Rs. 3,800</span></div>
+          <button class="add-to-cart-btn">ADD TO CART</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="jeans">
+        <a href="#"><img src="J2.png" alt="Straight Leg Jeans"></a>
+        <div class="product-details">
+          <p class="product-name">Straight Leg Jeans</p>
+          <p class="product-desc">Classic straight-leg denim for a timeless everyday look.</p>
+          <div class="product-price"><span class="price-amount">Rs. 3,600</span></div>
+          <button class="add-to-cart-btn">ADD TO CART</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="jeans">
+        <a href="#"><img src="J3.png" alt="Ripped Grey Jeans"></a>
+        <div class="product-details">
+          <p class="product-name">Ripped Grey Jeans</p>
+          <p class="product-desc">Trendy ripped grey jeans, perfect for casual outings.</p>
+          <div class="product-price"><span class="price-amount">Rs. 4,200</span></div>
+          <button class="add-to-cart-btn">ADD TO CART</button>
+        </div>
+      </div>
+
+      <div class="product-card" data-category="jeans">
+        <a href="#"><img src="J4.png" alt="Bootcut Jeans"></a>
+        <div class="product-details">
+          <p class="product-name">Bootcut Jeans</p>
+          <p class="product-desc">Bootcut denim that adds retro vibes with modern comfort.</p>
+          <div class="product-price"><span class="price-amount">Rs. 4,000</span></div>
+          <button class="add-to-cart-btn">ADD TO CART</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
     <!-- ===== SERVICE HIGHLIGHTS ===== -->
     <section class="service-highlights">
@@ -273,6 +357,198 @@
     <div class="bottom-footer-text">
         <p>All Rights Reserved. © 2024 ZIA Collections</p>
     </div>
-</body>
+    <!-- Login Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 class="login-title">WELCOME</h2>
+    <p class="login-subtitle">Sign in to your account</p>
 
+    <form>
+      <!-- Email -->
+      <label>Email <span class="required">*</span></label>
+      <input type="email" placeholder="Enter your email" required />
+
+      <!-- Password -->
+      <label>Password <span class="required">*</span></label>
+      <div class="password-wrapper">
+       <input type="password" id="password" placeholder="Enter your password" required>
+       <i class="fa-solid fa-eye toggle-password" id="togglePassword"></i>
+      </div>
+
+      <!-- Options -->
+      <div class="form-options">
+        <label><input type="checkbox" /> Remember me</label>
+        <a href="#">Forgot Password?</a>
+      </div>
+
+      <!-- Login button -->
+      <button type="submit" class="login-btn">LOGIN</button>
+
+      <!-- Divider -->
+      <div class="divider">OR LOGIN WITH</div>
+
+      <!-- Social buttons -->
+     
+      <div class="social-login">
+         <a href="#" class="social-link">
+       <img src="google.png" alt="Google Login">
+      </a>
+      <a href="#" class="social-link">
+    <img src="facebook.png" alt="Facebook Login">
+      </a>
+    </div>
+      <!-- Signup -->
+      <p class="signup-text">Don't have an account? <a href="#" id="openSignup">Sign Up</a></p>
+
+    </form>
+  </div>
+
+</div>
+<!-- Signup Modal -->
+<div id="signupModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 class="login-title">CREATE ACCOUNT</h2>
+    <p class="login-subtitle">Sign up to start shopping</p>
+
+    <!-- 👇 added id="signupForm" -->
+    <form id="signupForm">
+      <!-- Email -->
+      <label>Email <span class="required">*</span></label>
+      <input type="email" placeholder="Enter your email" required />
+
+      <!-- Password -->
+      <label>Password <span class="required">*</span></label>
+      <div class="password-wrapper">
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <i class="fa-solid fa-eye toggle-password" id="togglePassword"></i>
+      </div>
+
+      <!-- Confirm Password -->
+      <label>Confirm Password <span class="required">*</span></label>
+      <div class="password-wrapper">
+        <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+        <i class="fa-solid fa-eye toggle-password" id="toggleConfirmPassword"></i>
+      </div>
+
+      <!-- Signup button -->
+      <button type="submit" class="login-btn">SIGN UP</button>
+
+      <!-- Divider -->
+      <div class="divider">OR SIGN UP WITH</div>
+
+      <!-- Social buttons -->
+      <div class="social-login">
+        <a href="#" class="social-link">
+          <img src="google.png" alt="Google Login">
+        </a>
+        <a href="#" class="social-link">
+          <img src="facebook.png" alt="Facebook Login">
+        </a>
+      </div>
+
+      <!-- Login Redirect -->
+      <p class="signup-text">Already have an account? <a href="#" id="openLogin">Login</a></p>
+    </form>
+  </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Elements
+  const loginModal = document.getElementById('loginModal');
+  const signupModal = document.getElementById('signupModal');
+
+  // Helpers
+  const showModal = (m) => { if (m) m.style.display = 'flex'; };
+  const hideModal = (m) => { if (m) m.style.display = 'none'; };
+
+  // Make openLogin available for the inline onclick in your header button
+  window.openLogin = () => showModal(loginModal);
+
+  // Open links (login modal -> signup, signup modal -> login)
+  const openSignupLink = document.getElementById('openSignup');
+  const openLoginLink  = document.getElementById('openLogin');
+
+  if (openSignupLink) {
+    openSignupLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      hideModal(loginModal);
+      showModal(signupModal);
+    });
+  }
+
+  if (openLoginLink) {
+    openLoginLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      hideModal(signupModal);
+      showModal(loginModal);
+    });
+  }
+
+  // Close (X) buttons — works for both modals
+  document.querySelectorAll('.modal .close').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modal = btn.closest('.modal');
+      hideModal(modal);
+    });
+  });
+
+  // Click outside modal to close
+  window.addEventListener('click', (e) => {
+    if (e.target && e.target.classList && e.target.classList.contains('modal')) {
+      hideModal(e.target);
+    }
+  });
+
+  // Password show/hide toggle (works for any .password-wrapper .toggle-password)
+  document.querySelectorAll('.toggle-password').forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      // find nearest input inside same password-wrapper
+      const wrapper = toggle.closest('.password-wrapper');
+      const input = wrapper ? wrapper.querySelector('input') : null;
+      if (!input) return;
+
+      if (input.type === 'password') {
+        input.type = 'text';
+        // swap icon classes if present
+        toggle.classList.remove('fa-eye'); toggle.classList.add('fa-eye-slash');
+      } else {
+        input.type = 'password';
+        toggle.classList.remove('fa-eye-slash'); toggle.classList.add('fa-eye');
+      }
+    });
+  });
+
+  const signupForm = document.getElementById('signupForm') || (signupModal && signupModal.querySelector('form'));
+  if (signupForm) {
+    signupForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      // optional simple confirm-password check:
+      const pwInputs = signupForm.querySelectorAll('input[type="password"]');
+      if (pwInputs.length >= 2) {
+        const p1 = pwInputs[0].value;
+        const p2 = pwInputs[1].value;
+        if (p1 !== p2) {
+          alert('Passwords do not match. Please check.');
+          return;
+        }
+      }
+      alert('Sign Up button clicked! (test)');
+      hideModal(signupModal);
+    });
+  }
+
+  document.querySelectorAll('.modal form').forEach(form => {
+    if (form !== signupForm) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Form submit prevented (test mode).');
+        hideModal(form.closest('.modal'));
+      });
+    }
+  });
+});
+</script>
+</body>
 </html>
