@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5DC; 
+            color: #4B2E1D; 
+        }
+
+        header {
+            background-color: #ab0741; 
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        .home-icon {
+    width: 60px;   /* icon ka size */
+    height: 55px;
+    position: absolute;
+    left: 20px;   /* left corner */
+    top: 10px;    /* thoda upar se neeche */
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* hand cursor jab hover kare */
+}
+.home-icon:hover {
+    transform: scale(1.2); /* thoda bara ho jaye hover pe */
+    opacity: 0.8;          /* thoda fade effect */
+}
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #b48167;
+            text-decoration: underline; /* Coffee */
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #b48167; /* Saddle Brown */
+            margin-top: 20px;
+            text-decoration: underline
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Footer Styles (black) */
+        .site-footer {
+            background-color: #000; /* Black background */
+            color: white;
+            padding: 40px 20px 20px 20px;
+        }
+
+        .site-footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .site-footer a:hover {
+            text-decoration: underline;
+            color : #ab0741
+        }
+
+        .footer-top {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+        }
+
+        .social-links a img {
+            width: 30px;
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 22px;
+            }
+
+            main {
+                padding: 0 10px;
+            }
+
+            .footer-top {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .site-footer .social-links a img {
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+}
+
+.site-footer .social-links a:hover img {
+    transform: scale(1.2); 
+    opacity: 0.8;          
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+  <img src="Home.png" alt="Home" class="home-icon">
+</a>
+
+        <h1>About Us</h1>
+    </header>
+
+    <main>
+    <section class="about-intro">
+        <h2 style="text-align: center;">Welcome to Zia Collections</h2>
+        <p>Zia Collections is a premier fashion brand committed to delivering high-quality clothing and accessories. We focus on creating trendy, comfortable, and affordable fashion that empowers individuals to express themselves confidently every day.</p>
+    </section>
+
+    <section class="about-mission">
+        <h2 style="text-align: center;">Our Mission</h2>
+        <p>Our mission is to inspire and empower people through fashion. We believe that clothing is more than style; it is a way to express personality, confidence, and individuality in every moment.</p>
+    </section>
+
+    <section class="about-vision">
+        <h2 style="text-align: center;">Our Vision</h2>
+        <p>We aim to become a globally recognized brand known for quality, innovation, and exceptional customer satisfaction. Ethical practices and sustainability guide all our efforts in the fashion industry.</p>
+    </section>
+
+    <section class="about-team">
+        <h2 style="text-align: center;">Meet Our Team</h2>
+        <p>Our team of talented designers, stylists, and fashion experts work passionately to bring you the latest trends. Every member is dedicated to creating a unique fashion experience for our customers.</p>
+    </section>
+</main>
+    <!-- Footer (black) -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-column">
+                <h3>HELP</h3>
+                <ul>
+                    <li><a href="exchange_return.html">EXCHANGE & RETURN</a></li>
+                    <li><a href="#">FAQ'S</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="#">TERMS & CONDITIONS</a></li>
+                    <li><a href="#">PRIVACY POLICIES</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>MORE ABOUT ZIA COLLECTIONS</h3>
+                <ul>
+                    <li><a href="about.html">ABOUT US</a></li>
+                    <li><a href="#">STORE LOCATOR</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="youtube.png" alt="youtube"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

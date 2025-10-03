@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange & Return</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5DC; 
+            color: #4B2E1D; 
+        }
+
+        header {
+            background-color: #ab0741; 
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-style: italic; 
+        }
+        .home-icon {
+    width: 60px;   /* icon ka size */
+    height: 55px;
+    position: absolute;
+    left: 20px;   /* left corner */
+    top: 10px;    /* thoda upar se neeche */
+    cursor: pointer; /* hand cursor jab hover kare */
+}
+
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            color: #b48167; /* Coffee */
+            margin-top: 30px;
+            text-decoration: underline;
+        }
+
+        h3 {
+            color: #b48167; /* Saddle Brown */
+            margin-top: 20px;
+            text-decoration: underline;
+        }
+
+        p, li {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        /* Form Styles */
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .home-icon:hover {
+    transform: scale(1.2); /* thoda bara ho jaye hover pe */
+    opacity: 0.8;          /* thoda fade effect */
+}
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input[type="text"], 
+        textarea, 
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #D2B48C; /* Tan border */
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #a16753; /* Saddle Brown */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ab0741; /* Sienna */
+        }
+
+        /* Footer Styles (from your Home page) */
+        .site-footer {
+            background-color:#000 ; /* Dark brown to match theme */
+            color: white;
+            padding: 40px 20px 20px 20px;
+        }
+
+        .site-footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .site-footer a:hover {
+            text-decoration: underline;
+            color: #ab0741;
+        }
+
+        .footer-top {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+        }
+
+        .social-links a img {
+            width: 30px;
+            margin: 0 5px;
+            vertical-align: middle;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+          .social-links a:hover img {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 22px;
+            }
+
+            main {
+                padding: 0 10px;
+            }
+
+            .footer-top {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .site-footer .social-links a img {
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+}
+
+.site-footer .social-links a:hover img {
+    transform: scale(1.2); 
+    opacity: 0.8;         
+}
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <a href="index.html">
+  <img src="Home.png" alt="Home" class="home-icon">
+</a>
+
+        <h1>Exchange & Return Policy</h1>
+    </header>
+
+    <main>
+        <section class="exchange-return-info">
+            <h2>Our Policy</h2>
+            <p>We accept exchanges and returns within <strong>14 days</strong> of purchase. Products must be in original condition with tags and packaging intact.</p>
+            
+            <h3>How to Request an Exchange or Return:</h3>
+            <ol>
+                <li>Go to your <strong>Orders</strong> page.</li>
+                <li>Select the item you want to exchange or return.</li>
+                <li>Click on <strong>"Request Exchange/Return"</strong>.</li>
+                <li>Fill out the form with your reason.</li>
+                <li>Follow the instructions for shipping your item back.</li>
+            </ol>
+
+            <h3>Refunds:</h3>
+            <p>Refunds will be processed within 5-7 business days after we receive the returned item. Original payment method will be used for the refund.</p>
+        </section>
+
+        <section class="exchange-return-form">
+            <h2>Submit Your Request</h2>
+            <form action="#" method="post">
+                <label for="order-id">Order ID:</label>
+                <input type="text" id="order-id" name="order-id" required>
+
+                <label for="reason">Reason for Exchange/Return:</label>
+                <textarea id="reason" name="reason" rows="4" required></textarea>
+
+                <label for="type">Request Type:</label>
+                <select id="type" name="type">
+                    <option value="exchange">Exchange</option>
+                    <option value="return">Return</option>
+                </select>
+
+                <button type="submit">Submit Request</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Home Page Footer -->
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-column">
+                <h3>HELP</h3>
+                <ul>
+                    <li><a href="exchange_return.html">EXCHANGE & RETURN</a></li>
+                    <li><a href="#">FAQ'S</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">TERMS & CONDITIONS</a></li>
+                    <li><a href="#">PRIVACY POLICIES</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>MORE ABOUT ZIA COLLECTIONS</h3>
+                <ul>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">STORE LOCATOR</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="social-links">
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="youtube.png" alt="youtube"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

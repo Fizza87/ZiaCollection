@@ -11,32 +11,31 @@
 </head>
 
 <body>
-    <!-- ===== HEADER ===== -->
+
     <header class="site-header">
         <div class="header-inner">
-            <!-- Left logo -->
             <div class="header-left">
                 <a href="#" class="logo-link">
-                    <img src="zia.png" alt="Zia Collections Logo" class="logo-img">
+                    <img src="logo.png" alt="Zia Collections Logo" class="logo-img">
                 </a>
             </div>
 
-            <!-- Navigation -->
             <nav class="main-nav" aria-label="Primary">
                 <ul class="nav-list">
+
                     <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
 
                     <li class="nav-item has-dropdown">
-                        <a href="#" class="nav-link">Sales</a>
+                         <a href="sales.html" class="nav-link">Sales</a>
                         <ul class="dropdown">
-                            <li><a href="#" class="dd-link">50% Off</a></li>
-                            <li><a href="#" class="dd-link">Clearance</a></li>
-                            <li><a href="#" class="dd-link">Limited Time Deals</a></li>
+                            <li><a href="sales.html#fifty-off" class="dd-link">50% Off</a></li>
+                            <li><a href="sales.html#clearance" class="dd-link">Clearance</a></li>
+                            <li><a href="sales.html#limited-time-deals" class="dd-link">Limited Time Deals</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item has-dropdown">
-                        <a href="#" class="nav-link">New Arrivals</a>
+                        <a href="index.html?category=all#featured-products" class="nav-link">New Arrivals</a>
                         <ul class="dropdown">
                             <li><a href="#" class="dd-link">Latest Skirts</a></li>
                             <li><a href="#" class="dd-link">New T-shirts</a></li>
@@ -84,261 +83,262 @@
                 </ul>
             </nav>
 
-            <!-- Right icons -->
             <div class="header-right">
-                <button class="icon-btn" aria-label="Search">
-                    <img src="search.png" alt="Search" class="icon-img">
+                <button class="icon-btn" id="toggleQuickSearch" aria-label="Search">
+                   <img src="search.png" alt="Search" class="icon-img">
                 </button>
 
                 <button class="icon-btn" onclick="openLogin()">
-                     <img src="login.png" alt="Login" class="icon-img">
+                    <img src="login.png" alt="Login" class="icon-img">
                 </button>
 
                 <button class="icon-btn" aria-label="Cart">
                     <img src="cart.png" alt="Cart" class="icon-img">
                 </button>
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
+    <div id="quickSearchBar" class="quick-search-bar">
+        <form action="#" method="get" class="quick-search-form">
+            <input type="search" name="q" placeholder="Start typing to search..." class="quick-search-input" required>
+            <button type="submit" class="quick-search-submit-btn" aria-label="Submit search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button type="button" class="close-quick-search-btn" aria-label="Close search"><i class="fa-solid fa-xmark"></i></button>
+        </form>
+    </div>
 
-    <hr class="header-divider">
+    <div class="page-content-wrapper"> 
 
-    <!-- ===== BANNER SECTION ===== -->
-    <section class="banner-section">
-        <div class="banner-content">
-            <h1>FALL INTO FASHION</h1>
-            <p>Discover Our New Collection</p>
-            <a href="#" class="shop-now-btn">SHOP NOW</a>
-        </div>
-    </section>
+        <hr class="header-divider">
 
-    <!-- ===== CATEGORIES ===== -->
-    <section class="categories">
-        <div class="category-grid">
-            <a href="kids.html" class="category-link">
-                <div class="category-card">
-                    <img src="kids.png" alt="Kids Category">
-                    <div class="category-label">KIDS</div>
+        <section class="banner-section">
+            <div class="banner-content">
+                <h1>FALL INTO FASHION</h1>
+                <p>Discover Our New Collection</p>
+                <a href="#" class="shop-now-btn">SHOP NOW</a>
+            </div>
+        </section>
+
+        <section class="categories">
+            <div class="category-grid">
+                <a href="kids.html" class="category-link">
+                    <div class="category-card">
+                        <img src="kid.png" alt="Kids Category">
+                        <div class="category-label">KIDS</div>
+                    </div>
+                </a>
+
+                <a href="women.html" class="category-link">
+                    <div class="category-card">
+                        <img src="women.png" alt="Women Category">
+                        <div class="category-label">WOMEN</div>
+                    </div>
+                </a>
+
+                <a href="men.html" class="category-link">
+                    <div class="category-card">
+                        <img src="men.png" alt="Men Category">
+                        <div class="category-label">MEN</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section id="featured-products" class="featured-products">
+            <div class="section-container">
+                <h2>Featured Products</h2>
+
+                <div class="filter-buttons">
+                    <button data-category="skirts" class="filter-btn active"><span>Skirts</span></button>
+                    <button data-category="shirts" class="filter-btn"><span>Shirts</span></button>
+                    <button data-category="jeans" class="filter-btn"><span>Jeans</span></button>
+                    <button data-category="all" class="filter-btn"><span>All</span></button>
                 </div>
-            </a>
 
-            <a href="women.html" class="category-link">
-                <div class="category-card">
-                    <img src="women.png" alt="Women Category">
-                    <div class="category-label">WOMEN</div>
+
+                <div class="product-grid">
+
+                    <div class="product-card" data-category="skirts">
+                        <a href="#"><img src="sk1.png" alt="Floral Midi Skirt"></a>
+                        <div class="product-details">
+                            <p class="product-name">Floral Midi Skirt</p>
+                            <p class="product-desc">A breezy floral midi skirt, perfect for summer brunches.</p>
+                            <div class="product-price"><span class="price-amount">Rs. 2,950</span></div>
+                            <button class="add-to-cart-btn">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="skirts">
+                        <a href="#"><img src="sk2.png" alt="Denim A-Line Skirt"></a>
+                        <div class="product-details">
+                            <p class="product-name">Denim A-Line Skirt</p>
+                            <p class="product-desc">Classic blue denim skirt with an A-line cut for a casual chic look.</p>
+                            <div class="product-price"><span class="price-amount">Rs. 3,200</span></div>
+                            <button class="add-to-cart-btn">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="skirts">
+                        <a href="#"><img src="sk3.png" alt="Pleated Long Skirt"></a>
+                        <div class="product-details">
+                            <p class="product-name">Pleated Long Skirt</p>
+                            <p class="product-desc">Elegant pleated skirt, suitable for office wear or dinners.</p>
+                            <div class="product-price"><span class="price-amount">Rs. 4,100</span></div>
+                            <button class="add-to-cart-btn">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="skirts">
+                        <a href="#"><img src="sk4.png" alt="High-Waist Pencil Skirt"></a>
+                        <div class="product-details">
+                            <p class="product-name">High-Waist Pencil Skirt</p>
+                            <p class="product-desc">Sleek high-waist pencil skirt, ideal for formal looks.</p>
+                            <div class="product-price"><span class="price-amount">Rs. 3,850</span></div>
+                            <button class="add-to-cart-btn">ADD TO CART</button>
+                        </div>
+                    </div>
+
+
+                    <div class="product-card" data-category="shirts">
+                        <a href="#"><img src="S1.png" alt="Check Pink Shirt"></a>
+                        <div class="product-details">
+                            <p class="product-name">Check Pink Shirt</p>
+                            <p class="product-desc">Timeless cotton check pink shirt, perfect for casual and office wear.</p>
+                            <div class="product-price"><span class="price-amount">Rs. 2,500</span></div>
+                            <button class="add-to-cart-btn">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="shirts">
+                        <a href="#"><img src="S2.png" alt="Plain Shirt"></a>
+                        <div class="product-details">
+                            <p class="product-name">Plain Shirt</p>
+                            <p class="product-desc">Trendy plain shirt for everyday comfort and style.</p>
+                            <div class="product-price"><span class="price-amount">Rs. 2,800</span></div>
+                            <button class="add-to-cart-btn">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="shirts">
+                        <a href="#"><img src="S3.png" alt="Brown Shirt"></a>
+                        <div class="product-details">
+                            <p class="product-name">Brown Shirt</p>
+                            <p class="product-desc">Lightweight brown shirt, ideal for a smart-casual look.</p>
+                            <div class="product-price"><span class="price-amount">Rs. 3,100</span></div>
+                            <button class="add-to-cart-btn">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="shirts">
+                        <a href="#"><img src="S4.png" alt="Polo Shirt"></a>
+                        <div class="product-details">
+                            <p class="product-name">Polo Shirt</p>
+                            <p class="product-desc">Polo shirt tailored for meetings and events.</p>
+                            <div class="product-price"><span class="price-amount">Rs. 3,400</span></div>
+                            <button class="add-to-cart-btn">ADD TO CART</button>
+                        </div>
+                    </div>
+
+
+                    <div class="product-card" data-category="jeans">
+                        <a href="#"><img src="J1.png" alt="Printed Jeans"></a>
+                        <div class="product-details">
+                            <p class="product-name">Printed Jeans</p>
+                            <p class="product-desc">Stylish printed jeans designed for comfort and style.</p>
+                            <div class="product-price"><span class="price-amount">Rs. 3,800</span></div>
+                            <button class="add-to-cart-btn">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="jeans">
+                        <a href="#"><img src="J2.png" alt="Straight Leg Jeans"></a>
+                        <div class="product-details">
+                            <p class="product-name">Straight Leg Jeans</p>
+                            <p class="product-desc">Classic straight-leg denim for a timeless everyday look.</p>
+                            <div class="product-price"><span class="price-amount">Rs. 3,600</span></div>
+                            <button class="add-to-cart-btn">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="jeans">
+                        <a href="#"><img src="J3.png" alt="Ripped Grey Jeans"></a>
+                        <div class="product-details">
+                            <p class="product-name">Ripped Grey Jeans</p>
+                            <p class="product-desc">Trendy ripped grey jeans, perfect for casual outings.</p>
+                            <div class="product-price"><span class="price-amount">Rs. 4,200</span></div>
+                            <button class="add-to-cart-btn">ADD TO CART</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card" data-category="jeans">
+                        <a href="#"><img src="J4.png" alt="Bootcut Jeans"></a>
+                        <div class="product-details">
+                            <p class="product-name">Bootcut Jeans</p>
+                            <p class="product-desc">Bootcut denim that adds retro vibes with modern comfort.</p>
+                            <div class="product-price"><span class="price-amount">Rs. 4,000</span></div>
+                            <button class="add-to-cart-btn">ADD TO CART</button>
+                        </div>
+                    </div>
                 </div>
-            </a>
-
-            <a href="men.html" class="category-link">
-                <div class="category-card">
-                    <img src="men.jpg" alt="Men Category">
-                    <div class="category-label">MEN</div>
+            </div>
+      </section>
+      <section class="service-highlights">
+            <div class="service-inner">
+                <div class="service-item">
+                    <div class="service-icon-box">
+                        <img src="truck.png" alt="Shipping Icon" class="service-icon">
+                    </div>
+                    <div class="service-text">
+                        <p class="service-title">SHIPPING CHARGES</p>
+                        <p class="service-desc">Starting from Rs. 150</p>
+                    </div>
                 </div>
-            </a>
-        </div>
-    </section>
-    <!-- ===== FEATURED PRODUCTS ===== -->
-<section class="featured-products">
-  <div class="section-container">
-    <h2>Featured Products</h2>
 
-    <!-- Filter Buttons -->
-      <div class="filter-buttons">
-         <button data-category="skirts" class="filter-btn"><span>Skirts</span></button>
-         <button data-category="shirts" class="filter-btn"><span>Shirts</span></button>
-         <button data-category="jeans" class="filter-btn"><span>Jeans</span></button>
-         <button data-category="all" class="filter-btn active"><span>All</span></button>
-      </div>
+                <div class="service-item">
+                    <div class="service-icon-box">
+                        <img src="track.png" alt="Track Order Icon" class="service-icon">
+                    </div>
+                    <div class="service-text">
+                        <p class="service-title">TRACK YOUR ORDER</p>
+                        <p class="service-desc">Check status of your order.</p>
+                    </div>
+                </div>
 
-
-    <!-- Product Grid -->
-    <div class="product-grid">
-      
-      <!-- Skirts Category -->
-      <div class="product-card" data-category="skirts">
-        <a href="#"><img src="sk1.png" alt="Floral Midi Skirt"></a>
-        <div class="product-details">
-          <p class="product-name">Floral Midi Skirt</p>
-          <p class="product-desc">A breezy floral midi skirt, perfect for summer brunches.</p>
-          <div class="product-price"><span class="price-amount">Rs. 2,950</span></div>
-          <button class="add-to-cart-btn">ADD TO CART</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-category="skirts">
-        <a href="#"><img src="sk2.png" alt="Denim A-Line Skirt"></a>
-        <div class="product-details">
-          <p class="product-name">Denim A-Line Skirt</p>
-          <p class="product-desc">Classic blue denim skirt with an A-line cut for a casual chic look.</p>
-          <div class="product-price"><span class="price-amount">Rs. 3,200</span></div>
-          <button class="add-to-cart-btn">ADD TO CART</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-category="skirts">
-        <a href="#"><img src="sk3.png" alt="Pleated Long Skirt"></a>
-        <div class="product-details">
-          <p class="product-name">Pleated Long Skirt</p>
-          <p class="product-desc">Elegant pleated skirt, suitable for office wear or dinners.</p>
-          <div class="product-price"><span class="price-amount">Rs. 4,100</span></div>
-          <button class="add-to-cart-btn">ADD TO CART</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-category="skirts">
-        <a href="#"><img src="sk4.png" alt="High-Waist Pencil Skirt"></a>
-        <div class="product-details">
-          <p class="product-name">High-Waist Pencil Skirt</p>
-          <p class="product-desc">Sleek high-waist pencil skirt, ideal for formal looks.</p>
-          <div class="product-price"><span class="price-amount">Rs. 3,850</span></div>
-          <button class="add-to-cart-btn">ADD TO CART</button>
-        </div>
-      </div>
-
-
-      <!-- Shirts Category -->
-      <div class="product-card" data-category="shirts">
-        <a href="#"><img src="S1.png" alt="Check Pink Shirt"></a>
-        <div class="product-details">
-          <p class="product-name">Check Pink Shirt</p>
-          <p class="product-desc">Timeless cotton check pink shirt, perfect for casual and office wear.</p>
-          <div class="product-price"><span class="price-amount">Rs. 2,500</span></div>
-          <button class="add-to-cart-btn">ADD TO CART</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-category="shirts">
-        <a href="#"><img src="S2.png" alt="Plain Shirt"></a>
-        <div class="product-details">
-          <p class="product-name">Plain Shirt</p>
-          <p class="product-desc">Trendy plain shirt for everyday comfort and style.</p>
-          <div class="product-price"><span class="price-amount">Rs. 2,800</span></div>
-          <button class="add-to-cart-btn">ADD TO CART</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-category="shirts">
-        <a href="#"><img src="S3.png" alt="Brown Shirt"></a>
-        <div class="product-details">
-          <p class="product-name">Brown Shirt</p>
-          <p class="product-desc">Lightweight brown shirt, ideal for a smart-casual look.</p>
-          <div class="product-price"><span class="price-amount">Rs. 3,100</span></div>
-          <button class="add-to-cart-btn">ADD TO CART</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-category="shirts">
-        <a href="#"><img src="S4.png" alt="Polo Shirt"></a>
-        <div class="product-details">
-          <p class="product-name">Polo Shirt</p>
-          <p class="product-desc">Polo shirt tailored for meetings and events.</p>
-          <div class="product-price"><span class="price-amount">Rs. 3,400</span></div>
-          <button class="add-to-cart-btn">ADD TO CART</button>
-        </div>
-      </div>
-
-
-      <!-- Jeans Category -->
-      <div class="product-card" data-category="jeans">
-        <a href="#"><img src="J1.png" alt="Printed Jeans"></a>
-        <div class="product-details">
-          <p class="product-name">Printed Jeans</p>
-          <p class="product-desc">Stylish printed jeans designed for comfort and style.</p>
-          <div class="product-price"><span class="price-amount">Rs. 3,800</span></div>
-          <button class="add-to-cart-btn">ADD TO CART</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-category="jeans">
-        <a href="#"><img src="J2.png" alt="Straight Leg Jeans"></a>
-        <div class="product-details">
-          <p class="product-name">Straight Leg Jeans</p>
-          <p class="product-desc">Classic straight-leg denim for a timeless everyday look.</p>
-          <div class="product-price"><span class="price-amount">Rs. 3,600</span></div>
-          <button class="add-to-cart-btn">ADD TO CART</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-category="jeans">
-        <a href="#"><img src="J3.png" alt="Ripped Grey Jeans"></a>
-        <div class="product-details">
-          <p class="product-name">Ripped Grey Jeans</p>
-          <p class="product-desc">Trendy ripped grey jeans, perfect for casual outings.</p>
-          <div class="product-price"><span class="price-amount">Rs. 4,200</span></div>
-          <button class="add-to-cart-btn">ADD TO CART</button>
-        </div>
-      </div>
-
-      <div class="product-card" data-category="jeans">
-        <a href="#"><img src="J4.png" alt="Bootcut Jeans"></a>
-        <div class="product-details">
-          <p class="product-name">Bootcut Jeans</p>
-          <p class="product-desc">Bootcut denim that adds retro vibes with modern comfort.</p>
-          <div class="product-price"><span class="price-amount">Rs. 4,000</span></div>
-          <button class="add-to-cart-btn">ADD TO CART</button>
-        </div>
-      </div>
+                <div class="service-item">
+                    <div class="service-icon-box">
+                        <img src="map.png" alt="Find Stores Icon" class="service-icon">
+                    </div>
+                    <div class="service-text">
+                        <p class="service-title">FIND STORES</p>
+                        <p class="service-desc">Stores countrywide across Pakistan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </div>
-  </div>
-</section>
-
-
-    <!-- ===== SERVICE HIGHLIGHTS ===== -->
-    <section class="service-highlights">
-        <div class="service-inner">
-            <div class="service-item">
-                <div class="service-icon-box">
-                    <img src="truck.png" alt="Shipping Icon" class="service-icon">
-                </div>
-                <div class="service-text">
-                    <p class="service-title">SHIPPING CHARGES</p>
-                    <p class="service-desc">Starting from Rs. 150</p>
-                </div>
-            </div>
-
-            <div class="service-item">
-                <div class="service-icon-box">
-                    <img src="track.png" alt="Track Order Icon" class="service-icon">
-                </div>
-                <div class="service-text">
-                    <p class="service-title">TRACK YOUR ORDER</p>
-                    <p class="service-desc">Check status of your order.</p>
-                </div>
-            </div>
-
-            <div class="service-item">
-                <div class="service-icon-box">
-                    <img src="map.png" alt="Find Stores Icon" class="service-icon">
-                </div>
-                <div class="service-text">
-                    <p class="service-title">FIND STORES</p>
-                    <p class="service-desc">Stores countrywide across Pakistan</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
     <footer class="site-footer">
         <div class="footer-top">
             <div class="footer-column">
                 <h3>HELP</h3>
                 <ul>
-                    <li><a href="#">EXCHANGE & RETURN</a></li>
-                    <li><a href="#">FAQ'S</a></li>
-                    <li><a href="#">CONTACT US</a></li>
-                    <li><a href="#">TERMS & CONDITIONS</a></li>
-                    <li><a href="#">PRIVACY POLICIES</a></li>
+                    <li><a href="exchange_return.html">EXCHANGE & RETURN</a></li>
+                    <li><a href="faqs.html">FAQ'S</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="term.html">TERMS & CONDITIONS</a></li>
+                    <li><a href="privacy.html">PRIVACY POLICIES</a></li>
                 </ul>
             </div>
 
             <div class="footer-column">
                 <h3>MORE ABOUT ZIA COLLECTIONS</h3>
                 <ul>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">STORE LOCATOR</a></li>
-                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="aboutus.html">ABOUT US</a></li>
+                    <li><a href="store-locator.html">STORE LOCATOR</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
                 </ul>
             </div>
         </div>
@@ -349,7 +349,6 @@
                 <a href="#"><img src="instagram.png" alt="Instagram"></a>
                 <a href="#"><img src="twitter.png" alt="Twitter"></a>
                 <a href="#"><img src="youtube.png" alt="youtube"></a>
-                <a href="#"><img src="pinterest.png" alt="pinterest"></a>
             </div>
         </div>
     </footer>
@@ -357,198 +356,306 @@
     <div class="bottom-footer-text">
         <p>All Rights Reserved. © 2024 ZIA Collections</p>
     </div>
-    <!-- Login Modal -->
-<div id="loginModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2 class="login-title">WELCOME</h2>
-    <p class="login-subtitle">Sign in to your account</p>
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="login-title">WELCOME</h2>
+            <p class="login-subtitle">Sign in to your account</p>
 
-    <form>
-      <!-- Email -->
-      <label>Email <span class="required">*</span></label>
-      <input type="email" placeholder="Enter your email" required />
+            <form>
+                <label>Email <span class="required">*</span></label>
+                <input type="email" placeholder="Enter your email" required />
 
-      <!-- Password -->
-      <label>Password <span class="required">*</span></label>
-      <div class="password-wrapper">
-       <input type="password" id="password" placeholder="Enter your password" required>
-       <i class="fa-solid fa-eye toggle-password" id="togglePassword"></i>
-      </div>
+                <label>Password <span class="required">*</span></label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <i class="fa-solid fa-eye toggle-password" id="togglePassword"></i>
+                </div>
 
-      <!-- Options -->
-      <div class="form-options">
-        <label><input type="checkbox" /> Remember me</label>
-        <a href="#">Forgot Password?</a>
-      </div>
+                <div class="form-options">
+                    <label><input type="checkbox" /> Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
 
-      <!-- Login button -->
-      <button type="submit" class="login-btn">LOGIN</button>
+                <button type="submit" class="login-btn">LOGIN</button>
 
-      <!-- Divider -->
-      <div class="divider">OR LOGIN WITH</div>
+                <div class="divider">OR LOGIN WITH</div>
 
-      <!-- Social buttons -->
-     
-      <div class="social-login">
-         <a href="#" class="social-link">
-       <img src="google.png" alt="Google Login">
-      </a>
-      <a href="#" class="social-link">
-    <img src="facebook.png" alt="Facebook Login">
-      </a>
+                <div class="social-login">
+                    <a href="#" class="social-link">
+                        <img src="google.png" alt="Google Login">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="facebook.png" alt="Facebook Login">
+                    </a>
+                </div>
+                <p class="signup-text">Don't have an account? <a href="#" id="openSignup">Sign Up</a></p>
+
+            </form>
+        </div>
+
     </div>
-      <!-- Signup -->
-      <p class="signup-text">Don't have an account? <a href="#" id="openSignup">Sign Up</a></p>
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="login-title">CREATE ACCOUNT</h2>
+            <p class="login-subtitle">Sign up to start shopping</p>
 
-    </form>
+            <form id="signupForm">
+                <label>Email <span class="required">*</span></label>
+                <input type="email" placeholder="Enter your email" required />
+
+                <label>Password <span class="required">*</span></label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <i class="fa-solid fa-eye toggle-password" id="togglePassword"></i>
+                </div>
+
+                <label>Confirm Password <span class="required">*</span></label>
+                <div class="password-wrapper">
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                    <i class="fa-solid fa-eye toggle-password" id="toggleConfirmPassword"></i>
+                </div>
+
+                <button type="submit" class="login-btn">SIGN UP</button>
+
+                <div class="divider">OR SIGN UP WITH</div>
+
+                <div class="social-login">
+                    <a href="#" class="social-link">
+                        <img src="google.png" alt="Google Login">
+                    </a>
+                    <a href="#" class="social-link">
+                        <img src="facebook.png" alt="Facebook Login">
+                    </a>
+                </div>
+
+                <p class="signup-text">Already have an account? <a href="#" id="openLogin">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Elements
+            const loginModal = document.getElementById('loginModal');
+            const signupModal = document.getElementById('signupModal');
+
+            // Helpers
+            const showModal = (m) => { if (m) m.style.display = 'flex'; };
+            const hideModal = (m) => { if (m) m.style.display = 'none'; };
+
+            // Make openLogin available for the inline onclick in your header button
+            window.openLogin = () => showModal(loginModal);
+
+            // Open links (login modal -> signup, signup modal -> login)
+            const openSignupLink = document.getElementById('openSignup');
+            const openLoginLink = document.getElementById('openLogin');
+
+            if (openSignupLink) {
+                openSignupLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    hideModal(loginModal);
+                    showModal(signupModal);
+                });
+            }
+
+            if (openLoginLink) {
+                openLoginLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    hideModal(signupModal);
+                    showModal(loginModal);
+                });
+            }
+
+            // Close (X) buttons — works for both modals
+            document.querySelectorAll('.modal .close').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const modal = btn.closest('.modal');
+                    hideModal(modal);
+                });
+            });
+
+            // Click outside modal to close
+            window.addEventListener('click', (e) => {
+                if (e.target && e.target.classList && e.target.classList.contains('modal')) {
+                    hideModal(e.target);
+                }
+            });
+
+            // Password show/hide toggle (works for any .password-wrapper .toggle-password)
+            document.querySelectorAll('.toggle-password').forEach(toggle => {
+                toggle.addEventListener('click', () => {
+                    // find nearest input inside same password-wrapper
+                    const wrapper = toggle.closest('.password-wrapper');
+                    const input = wrapper ? wrapper.querySelector('input') : null;
+                    if (!input) return;
+
+                    if (input.type === 'password') {
+                        input.type = 'text';
+                        // swap icon classes if present
+                        toggle.classList.remove('fa-eye'); toggle.classList.add('fa-eye-slash');
+                    } else {
+                        input.type = 'password';
+                        toggle.classList.remove('fa-eye-slash'); toggle.classList.add('fa-eye');
+                    }
+                });
+            });
+
+            const signupForm = document.getElementById('signupForm') || (signupModal && signupModal.querySelector('form'));
+            if (signupForm) {
+                signupForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    // optional simple confirm-password check:
+                    const pwInputs = signupForm.querySelectorAll('input[type="password"]');
+                    if (pwInputs.length >= 2) {
+                        const p1 = pwInputs[0].value;
+                        const p2 = pwInputs[1].value;
+                        if (p1 !== p2) {
+                            alert('Passwords do not match. Please check.');
+                            return;
+                        }
+                    }
+                    alert('Sign Up button clicked! (test)');
+                    hideModal(signupModal);
+                });
+            }
+
+            document.querySelectorAll('.modal form').forEach(form => {
+                if (form !== signupForm) {
+                    form.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        alert('Form submit prevented (test mode).');
+                        hideModal(form.closest('.modal'));
+                    });
+                }
+            });
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mainNav = document.querySelector('.main-nav');
+            const body = document.body;
+
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', () => {
+                    mainNav.classList.toggle('is-open');
+                    // Optional: Disable scrolling when menu is open
+                    if (mainNav.classList.contains('is-open')) {
+                        body.style.overflow = 'hidden';
+                    } else {
+                        body.style.overflow = '';
+                    }
+                });
+
+                // Close menu when a link is clicked
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        // Check if the menu is open before closing it
+                        if (mainNav.classList.contains('is-open')) {
+                            mainNav.classList.remove('is-open');
+                            body.style.overflow = '';
+                        }
+                    });
+                });
+            }
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-card');
+
+            function filterProducts(category) {
+                productCards.forEach(card => {
+                    const productCategory = card.getAttribute('data-category');
+
+                    if (category === 'all' || productCategory === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const selectedCategory = button.getAttribute('data-category');
+
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+
+                    button.classList.add('active');
+
+                    filterProducts(selectedCategory);
+                });
+            });
+            const initialActiveButton = document.querySelector('.filter-btn.active');
+
+            if (initialActiveButton) {
+                const initialCategory = initialActiveButton.getAttribute('data-category');
+                filterProducts(initialCategory);
+            }
+            // ===== NEW ARRIVALS AUTO-FILTER =====
+const urlParams = new URLSearchParams(window.location.search);
+const initialCategoryFromURL = urlParams.get('category');
+
+if (initialCategoryFromURL) {
+    // Remove active from all buttons
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    
+    // Find button matching category
+    const btn = document.querySelector(`.filter-btn[data-category="${initialCategoryFromURL}"]`);
+    if (btn) btn.classList.add('active');
+    
+    // Filter products
+    filterProducts(initialCategoryFromURL);
+
+    // Scroll to featured products
+    const featuredSection = document.getElementById('featured-products');
+    if (featuredSection) featuredSection.scrollIntoView({ behavior: 'smooth' });
+}
+             const searchBar = document.getElementById('quickSearchBar');
+             const toggleSearchBtn = document.getElementById('toggleQuickSearch');
+             const closeSearchBtn = document.querySelector('.close-quick-search-btn');
+
+             function toggleSearchBar() {
+                const input = searchBar.querySelector('.quick-search-input');
+    
+                if (searchBar.classList.contains('is-visible')) {
+
+                      searchBar.classList.remove('is-visible');
+                      input.blur();
+               }
+                else {
+                      searchBar.classList.add('is-visible');
+                      setTimeout(() => {
+                      input.focus();
+                        }, 100);
+                     }
+               }
+                if (toggleSearchBtn && searchBar) {
+                    toggleSearchBtn.addEventListener('click', toggleSearchBar);
+                    closeSearchBtn.addEventListener('click', toggleSearchBar);
+                }
+              document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && searchBar.classList.contains('is-visible')) {
+           toggleSearchBar();
+                    }
+               });
+            });
+        </script>
+    <!-- SIDE CART -->
+<div id="sideCart" class="side-cart">
+  <div class="side-cart-header">
+    <h2>Cart <span id="cartCount">(0 items)</span></h2>
+    <button id="closeCart">&times;</button>
   </div>
 
-</div>
-<!-- Signup Modal -->
-<div id="signupModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2 class="login-title">CREATE ACCOUNT</h2>
-    <p class="login-subtitle">Sign up to start shopping</p>
+  <div class="side-cart-content" id="cartItems">
+    <!-- Cart items dynamically appear here -->
+  </div>
 
-    <!-- 👇 added id="signupForm" -->
-    <form id="signupForm">
-      <!-- Email -->
-      <label>Email <span class="required">*</span></label>
-      <input type="email" placeholder="Enter your email" required />
-
-      <!-- Password -->
-      <label>Password <span class="required">*</span></label>
-      <div class="password-wrapper">
-        <input type="password" id="password" placeholder="Enter your password" required>
-        <i class="fa-solid fa-eye toggle-password" id="togglePassword"></i>
-      </div>
-
-      <!-- Confirm Password -->
-      <label>Confirm Password <span class="required">*</span></label>
-      <div class="password-wrapper">
-        <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
-        <i class="fa-solid fa-eye toggle-password" id="toggleConfirmPassword"></i>
-      </div>
-
-      <!-- Signup button -->
-      <button type="submit" class="login-btn">SIGN UP</button>
-
-      <!-- Divider -->
-      <div class="divider">OR SIGN UP WITH</div>
-
-      <!-- Social buttons -->
-      <div class="social-login">
-        <a href="#" class="social-link">
-          <img src="google.png" alt="Google Login">
-        </a>
-        <a href="#" class="social-link">
-          <img src="facebook.png" alt="Facebook Login">
-        </a>
-      </div>
-
-      <!-- Login Redirect -->
-      <p class="signup-text">Already have an account? <a href="#" id="openLogin">Login</a></p>
-    </form>
+  <div class="side-cart-footer">
+    <p id="cartTotal">Total: Rs.0.00</p>
+    <button class="checkout-btn">CHECKOUT</button>
   </div>
 </div>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Elements
-  const loginModal = document.getElementById('loginModal');
-  const signupModal = document.getElementById('signupModal');
 
-  // Helpers
-  const showModal = (m) => { if (m) m.style.display = 'flex'; };
-  const hideModal = (m) => { if (m) m.style.display = 'none'; };
-
-  // Make openLogin available for the inline onclick in your header button
-  window.openLogin = () => showModal(loginModal);
-
-  // Open links (login modal -> signup, signup modal -> login)
-  const openSignupLink = document.getElementById('openSignup');
-  const openLoginLink  = document.getElementById('openLogin');
-
-  if (openSignupLink) {
-    openSignupLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      hideModal(loginModal);
-      showModal(signupModal);
-    });
-  }
-
-  if (openLoginLink) {
-    openLoginLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      hideModal(signupModal);
-      showModal(loginModal);
-    });
-  }
-
-  // Close (X) buttons — works for both modals
-  document.querySelectorAll('.modal .close').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const modal = btn.closest('.modal');
-      hideModal(modal);
-    });
-  });
-
-  // Click outside modal to close
-  window.addEventListener('click', (e) => {
-    if (e.target && e.target.classList && e.target.classList.contains('modal')) {
-      hideModal(e.target);
-    }
-  });
-
-  // Password show/hide toggle (works for any .password-wrapper .toggle-password)
-  document.querySelectorAll('.toggle-password').forEach(toggle => {
-    toggle.addEventListener('click', () => {
-      // find nearest input inside same password-wrapper
-      const wrapper = toggle.closest('.password-wrapper');
-      const input = wrapper ? wrapper.querySelector('input') : null;
-      if (!input) return;
-
-      if (input.type === 'password') {
-        input.type = 'text';
-        // swap icon classes if present
-        toggle.classList.remove('fa-eye'); toggle.classList.add('fa-eye-slash');
-      } else {
-        input.type = 'password';
-        toggle.classList.remove('fa-eye-slash'); toggle.classList.add('fa-eye');
-      }
-    });
-  });
-
-  const signupForm = document.getElementById('signupForm') || (signupModal && signupModal.querySelector('form'));
-  if (signupForm) {
-    signupForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      // optional simple confirm-password check:
-      const pwInputs = signupForm.querySelectorAll('input[type="password"]');
-      if (pwInputs.length >= 2) {
-        const p1 = pwInputs[0].value;
-        const p2 = pwInputs[1].value;
-        if (p1 !== p2) {
-          alert('Passwords do not match. Please check.');
-          return;
-        }
-      }
-      alert('Sign Up button clicked! (test)');
-      hideModal(signupModal);
-    });
-  }
-
-  document.querySelectorAll('.modal form').forEach(form => {
-    if (form !== signupForm) {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Form submit prevented (test mode).');
-        hideModal(form.closest('.modal'));
-      });
-    }
-  });
-});
-</script>
+<script src="cart.js"></script>
+        
 </body>
 </html>

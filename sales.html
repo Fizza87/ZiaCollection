@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zia Collections | Shop All Sale</title>
+    <link rel="stylesheet" href="style.css"> 
+    
+    <style>
+        .site-header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.15); 
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 5%; 
+        }
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none; 
+        }
+
+        .logo-img {
+            height: 80px; 
+            width: auto;
+        }
+        .nav-list {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Individual nav items */
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: inline-block;
+    font-size: 15px;
+    padding: 0 16px;
+    color: #000;
+     text-decoration: underline;
+    color:#9A2A2A;
+    line-height: 36px;
+    transition: color 0.2s ease, transform 0.2s ease;
+    border-radius: 4px;
+}
+
+.nav-link:hover {
+    color: #111;
+    background: #faa5a8;
+    transform: translateY(-2px);
+}
+
+/* Icons */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .icon-btn img {
+            width: 30px; 
+            height: 30px;
+        }
+        
+        .header-divider {
+            border: 0;
+            height: 1px;
+            background-color: #e0e0e0;
+            margin: 0;
+        }
+
+        .page-content-wrapper {
+            
+            padding-top: 120px; 
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 20px;
+            padding-right: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .page-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .sales-banner-top {
+            background-color: #ab0741; 
+            color: white;
+            padding: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sales-banner-top h2 {
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+        
+        .product-card {
+            border: 1px solid #ab0741;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card .product-image-container {
+            position: relative;
+        }
+
+        .product-card .product-img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .sale-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #ab0741; 
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            z-index: 10;
+            font-size: 0.8em;
+        }
+
+        .product-card .price-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px; 
+            margin: 10px 0;
+        }
+
+        .product-card .original-price {
+            color: #999;
+            text-decoration: line-through;
+            font-size: 1em;
+            font-weight: normal;
+        }
+
+        .product-card .sale-price {
+            color:#ab0741; 
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        
+        .add-to-cart-btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 80%;
+            margin-top: 10px;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #ab0741;
+        }
+
+        /* --- 4. FOOTER STYLES (Keep existing) --- */
+
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="header-left">
+                <a href="index.html" class="logo-link">
+                    <img src="logo.png" alt="Zia Collections Logo" class="logo-img">
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="sales.html" class="nav-link active">Sales</a></li>
+                    <li class="nav-item"><a href="NewArrivals.html" class="nav-link">New Arrivals</a></li>
+                    <li class="nav-item"><a href="kids.html" class="nav-link">Kids</a></li>
+                    <li class="nav-item"><a href="women.html" class="nav-link">Women</a></li>
+                    <li class="nav-item"><a href="men.html" class="nav-link">Men</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-right">
+                <button class="icon-btn" aria-label="Search"><img src="search.png" alt="Search" class="icon-img"></button>
+                <button class="icon-btn" aria-label="Login"><img src="login.png" alt="Login" class="icon-img"></button>
+                <button class="icon-btn" aria-label="Cart"><img src="cart.png" alt="Cart" class="icon-img"></button>
+            </div>
+        </div>
+    </header>
+    <hr class="header-divider">
+    
+    <div class="page-content-wrapper">
+        <section class="all-sales-grid-page">
+            <h1 class="page-title">Shop All Sales!</h1>
+
+            <div class="sales-banner-top">
+                <h2>💸 Up to 50% Off Select Styles! Shop Fast! 💸</h2>
+                <p>Limited-time discounts on our best sellers. All sales are final.</p>
+            </div>
+
+            <h2 id="fifty-off" style="text-align: center; margin-top: 40px; color: #ff4d4d;">— 50% OFF DEALS —</h2>
+
+            <div class="product-grid sale-page-grid">
+                
+                <div class="product-card is-on-sale">
+                    <div class="product-image-container">
+                        <a href="product-detail.html"><img src="ki1.png" alt="Product Image" class="product-img"></a>
+                        <span class="sale-badge">-50% OFF</span>
+                    </div>
+                    <h3 class="product-name">Floral Party Frock</h3>
+                    <p class="product-desc">Ultimate summer style.</p>
+                    <div class="price-container">
+                        <span class="original-price">Rs. 4,999</span>
+                        <span class="sale-price">Rs. 2,499</span>
+                    </div>
+                    <a href="product-detail.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                </div>
+
+                <div class="product-card is-on-sale">
+                    <div class="product-image-container">
+                        <a href="product-detail.html"><img src="W2.png" alt="Product Image" class="product-img"></a>
+                        <span class="sale-badge">-50% OFF</span>
+                    </div>
+                    <h3 class="product-name">Silk Maxi Dress</h3>
+                    <p class="product-desc">Elegant evening wear.</p>
+                    <div class="price-container">
+                        <span class="original-price">Rs. 8,000</span>
+                        <span class="sale-price">Rs. 4,000</span>
+                    </div>
+                    <a href="product-detail.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                </div>
+
+                <div class="product-card is-on-sale">
+                    <div class="product-image-container">
+                        <a href="product-detail.html"><img src="M4.png" alt="Product Image" class="product-img"></a>
+                        <span class="sale-badge">-50% OFF</span>
+                    </div>
+                    <h3 class="product-name">Men's Casual Shirt</h3>
+                    <p class="product-desc">Breathable cotton.</p>
+                    <div class="price-container">
+                        <span class="original-price">Rs. 3,500</span>
+                        <span class="sale-price">Rs. 1,750</span>
+                    </div>
+                    <a href="product-detail.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                </div>
+
+                <div class="product-card is-on-sale">
+                    <div class="product-image-container">
+                        <a href="product-detail.html"><img src="ki3.png" alt="Product Image" class="product-img"></a>
+                        <span class="sale-badge">-50% OFF</span>
+                    </div>
+                    <h3 class="product-name">Kids Denim Jacket</h3>
+                    <p class="product-desc">Durable and stylish.</p>
+                    <div class="price-container">
+                        <span class="original-price">Rs. 4,000</span>
+                        <span class="sale-price">Rs. 2,000</span>
+                    </div>
+                    <a href="product-detail.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                </div>
+                
+            </div>
+
+            <h2 id="clearance" style="text-align: center; margin-top: 40px; color: #ff4d4d;">— CLEARANCE —</h2>
+
+            <div class="product-grid sale-page-grid">
+                
+                <div class="product-card is-on-sale">
+                    <div class="product-image-container">
+                        <a href="product-detail.html"><img src="M9.png" alt="Product Image" class="product-img"></a>
+                        <span class="sale-badge">CLEARANCE</span>
+                    </div>
+                    <h3 class="product-name">Cargo Pant</h3>
+                    <p class="product-desc">Last pairs remaining.</p>
+                    <div class="price-container">
+                        <span class="original-price">Rs. 5,999</span>
+                        <span class="sale-price">Rs. 2,999</span>
+                    </div>
+                    <a href="product-detail.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                </div>
+
+                <div class="product-card is-on-sale">
+                    <div class="product-image-container">
+                        <a href="product-detail.html"><img src="W10.png" alt="Product Image" class="product-img"></a>
+                        <span class="sale-badge">CLEARANCE</span>
+                    </div>
+                    <h3 class="product-name">Chiffon Scarf Set</h3>
+                    <p class="product-desc">Final season stock.</p>
+                    <div class="price-container">
+                        <span class="original-price">Rs. 2,500</span>
+                        <span class="sale-price">Rs. 750</span>
+                    </div>
+                    <a href="product-detail.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                </div>
+                
+                 <div class="product-card is-on-sale">
+                    <div class="product-image-container">
+                        <a href="product-detail.html"><img src="M10.png" alt="Product Image" class="product-img"></a>
+                        <span class="sale-badge">CLEARANCE</span>
+                    </div>
+                    <h3 class="product-name">Heavy Duty Sweater</h3>
+                    <p class="product-desc">Winter stock clearout.</p>
+                    <div class="price-container">
+                        <span class="original-price">Rs. 7,000</span>
+                        <span class="sale-price">Rs. 1,500</span>
+                    </div>
+                    <a href="product-detail.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                </div>
+
+                <div class="product-card is-on-sale">
+                    <div class="product-image-container">
+                        <a href="product-detail.html"><img src="ti2.png" alt="Product Image" class="product-img"></a>
+                        <span class="sale-badge">CLEARANCE</span>
+                    </div>
+                    <h3 class="product-name">Kids Rain Coat</h3>
+                    <p class="product-desc">Only large sizes left.</p>
+                    <div class="price-container">
+                        <span class="original-price">Rs. 3,000</span>
+                        <span class="sale-price">Rs. 900</span>
+                    </div>
+                    <a href="product-detail.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                </div>
+                
+            </div>
+            
+            <h2 id="limited-deals" style="text-align: center; margin-top: 40px; color: #ff4d4d;">— LIMITED TIME DEALS —</h2>
+
+            <div class="product-grid sale-page-grid">
+                
+                <div class="product-card is-on-sale">
+                    <div class="product-image-container">
+                        <a href="product-detail.html"><img src="W6.png" alt="Product Image" class="product-img"></a>
+                        <span class="sale-badge">FLASH SALE</span>
+                    </div>
+                    <h3 class="product-name">Striped Cotton Top</h3>
+                    <p class="product-desc">Classic retro charm.</p>
+                    <div class="price-container">
+                        <span class="original-price">Rs. 5,500</span>
+                        <span class="sale-price">Rs. 4,000</span>
+                    </div>
+                    <a href="product-detail.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                </div>
+
+                <div class="product-card is-on-sale">
+                    <div class="product-image-container">
+                        <a href="product-detail.html"><img src="M5.png" alt="Product Image" class="product-img"></a>
+                        <span class="sale-badge">LIMITED</span>
+                    </div>
+                    <h3 class="product-name">Old School T-shirt</h3>
+                    <p class="product-desc">High-quality, durable design.</p>
+                    <div class="price-container">
+                        <span class="original-price">Rs. 5,000</span>
+                        <span class="sale-price">Rs. 3,900</span>
+                    </div>
+                    <a href="product-detail.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                </div>
+
+                <div class="product-card is-on-sale">
+                    <div class="product-image-container">
+                        <a href="product-detail.html"><img src="ti3.png" alt="Product Image" class="product-img"></a>
+                        <span class="sale-badge">HOT DEAL</span>
+                    </div>
+                    <h3 class="product-name">Printed Stretch Tights</h3>
+                    <p class="product-desc">Versatile gym wear.</p>
+                    <div class="price-container">
+                        <span class="original-price">Rs. 2,500</span>
+                        <span class="sale-price">Rs. 1,999</span>
+                    </div>
+                    <a href="product-detail.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                </div>
+
+                <div class="product-card is-on-sale">
+                    <div class="product-image-container">
+                        <a href="product-detail.html"><img src="M2.png" alt="Product Image" class="product-img"></a>
+                        <span class="sale-badge">WEEKEND</span>
+                    </div>
+                    <h3 class="product-name">Slim Fit Jeans</h3>
+                    <p class="product-desc">Comfort stretch denim.</p>
+                    <div class="price-container">
+                        <span class="original-price">Rs. 6,500</span>
+                        <span class="sale-price">Rs. 4,500</span>
+                    </div>
+                    <a href="product-detail.html"><button class="add-to-cart-btn">Add to Cart</button></a>
+                </div>
+                
+            </div>
+            
+        </section>
+        
+    </div> 
+
+    <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-column">
+        <h3>HELP</h3>
+        <ul>
+          <li><a href="#">EXCHANGE & RETURN</a></li>
+          <li><a href="#">FAQ'S</a></li>
+          <li><a href="#">CONTACT US</a></li>
+          <li><a href="#">TERMS & CONDITIONS</a></li>
+          <li><a href="#">PRIVACY POLICIES</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>MORE ABOUT ZIA COLLECTIONS</h3>
+        <ul>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">STORE LOCATOR</a></li>
+          <li><a href="#">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="social-links">
+        <a href="#"><img src="facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="youtube.png" alt="youtube"></a>
+      </div>
+    </div>
+  </footer>
+  <div class="bottom-footer-text">
+    <p>All Rights Reserved. © 2024 ZIA Collections</p>
+  </div>
+</div>
+<!-- SIDE CART -->
+<div id="sideCart" class="side-cart">
+  <div class="side-cart-header">
+    <h2>Cart <span id="cartCount">(0 items)</span></h2>
+    <button id="closeCart">&times;</button>
+  </div>
+
+  <div class="side-cart-content" id="cartItems">
+    <!-- Cart items dynamically appear here -->
+  </div>
+
+  <div class="side-cart-footer">
+    <p id="cartTotal">Total: Rs.0.00</p>
+    <button class="checkout-btn">CHECKOUT</button>
+  </div>
+</div>
+
+<script src="cart.js"></script>
+</body>
+</html>
