@@ -365,23 +365,6 @@ body {
     margin-bottom: 20px;
 }
 
-.shop-now-btn {
-    display: inline-block;
-    padding: 15px 40px;
-    font-size: 1em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #fff;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-}
-
-.shop-now-btn:hover {
-    background-color: #fff;
-    color: #000;
-}
-
 /* ===== FEATURED PRODUCTS SECTION ===== */
 .featured-products {
     background-color: #dab89b;
