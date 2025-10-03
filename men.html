@@ -9,6 +9,7 @@
   <style>
     /* === Banner === */
     .men-banner {
+
       background: url('Menbanner.png') center/cover no-repeat;
       height: 300px;
       display: flex;
@@ -17,6 +18,10 @@
       text-align: center;
       color: rgb(239, 234, 234);
     }
+  .banner-section {
+  margin-top: 70px; /* header ki height jitni */
+}
+
 
     .men-banner .banner-content h1 {
       font-size: 2.5rem;
@@ -44,15 +49,16 @@
 
     .product-card {
       background: #efeaea;
-      border: 1px solid #e0e0e0;
+      border: 2px solid #b48167;
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
-      transition: transform 0.2s;
+      transition: transform 0.2s, border-color 0.3s;
     }
 
     .product-card:hover {
       transform: translateY(-5px);
+      border-color: #ff3366;
     }
 
     .product-card img {
@@ -106,7 +112,7 @@
     }
 
     .add-to-cart-btn:hover {
-      background: #f10404;
+      background: #ab0741;
     }
   </style>
 </head>
@@ -160,7 +166,7 @@
           <img src="M1.png" alt="Men Shirt">
           <div class="product-details">
             <p class="product-name">Classic Cotton Shirt</p>
-            <div class="product-price">Rs. 2500</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,500</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option><option>M</option><option>L</option><option>XL</option>
@@ -177,7 +183,7 @@
           <img src="M2.png" alt="Men Shirt">
           <div class="product-details">
             <p class="product-name">Formal Office Shirt</p>
-            <div class="product-price">Rs. 2700</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,700</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option><option>M</option><option>L</option><option>XL</option>
@@ -194,7 +200,7 @@
           <img src="M3.png" alt="Men Shirt">
           <div class="product-details">
             <p class="product-name">Casual Plaid Shirt</p>
-            <div class="product-price">Rs. 2600</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,600</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option><option>M</option><option>L</option><option>XL</option>
@@ -211,7 +217,7 @@
           <img src="M4.png" alt="Men Shirt">
           <div class="product-details">
             <p class="product-name">Slim Fit Shirt</p>
-            <div class="product-price">Rs. 2800</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,800</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option><option>M</option><option>L</option><option>XL</option>
@@ -230,7 +236,7 @@
           <img src="M5.png" alt="Men T-Shirt">
           <div class="product-details">
             <p class="product-name">Old School T-shirt</p>
-            <div class="product-price">Rs. 5,000</div>
+            <div class="product-price"><span class="price-amount">Rs. 5,000</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option><option>M</option><option>L</option><option>XL</option>
@@ -247,7 +253,7 @@
           <img src="M6.png" alt="Men T-Shirt">
           <div class="product-details">
             <p class="product-name">Grey Check T-Shirt</p>
-            <div class="product-price">Rs. 2500</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,500</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option><option>M</option><option>L</option><option>XL</option>
@@ -264,7 +270,7 @@
           <img src="M7.png" alt="Men T-Shirt">
           <div class="product-details">
             <p class="product-name">Polo T-Shirt</p>
-            <div class="product-price">Rs. 3500</div>
+            <div class="product-price"><span class="price-amount">Rs. 3,500</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option><option>M</option><option>L</option><option>XL</option>
@@ -281,7 +287,7 @@
           <img src="M8.png" alt="Men T-Shirt">
           <div class="product-details">
             <p class="product-name">Graphic Print T-Shirt</p>
-            <div class="product-price">Rs. 1900</div>
+            <div class="product-price"><span class="price-amount">Rs. 1,900</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option><option>M</option><option>L</option><option>XL</option>
@@ -300,7 +306,7 @@
           <img src="M9.png" alt="Men Jeans">
           <div class="product-details">
             <p class="product-name">Cargo Pant</p>
-            <div class="product-price">Rs. 5,999</div>
+            <div class="product-price"><span class="price-amount">Rs. 5,999</span></div>
             <div class="selectors">
               <select>
                 <option>Size: 30</option><option>32</option><option>34</option><option>36</option>
@@ -317,7 +323,7 @@
           <img src="M10.png" alt="Men Jeans">
           <div class="product-details">
             <p class="product-name">Straight Fit Jeans</p>
-            <div class="product-price">Rs. 3000</div>
+            <div class="product-price"><span class="price-amount">Rs. 3,000</span></div>
             <div class="selectors">
               <select>
                 <option>Size: 30</option><option>32</option><option>34</option><option>36</option>
@@ -334,7 +340,7 @@
           <img src="M11.png" alt="Men Jeans">
           <div class="product-details">
             <p class="product-name">Ripped Jeans</p>
-            <div class="product-price">Rs. 3400</div>
+            <div class="product-price"><span class="price-amount">Rs. 3,400</span></div>
             <div class="selectors">
               <select>
                 <option>Size: 30</option><option>32</option><option>34</option><option>36</option>
@@ -351,7 +357,7 @@
           <img src="M12.png" alt="Men Jeans">
           <div class="product-details">
             <p class="product-name">Classic Blue Jeans</p>
-            <div class="product-price">Rs. 3100</div>
+            <div class="product-price"><span class="price-amount">Rs. 3,100</span></div>
             <div class="selectors">
               <select>
                 <option>Size: 30</option><option>32</option><option>34</option><option>36</option>
@@ -370,7 +376,7 @@
           <img src="M13.png" alt="Men Jacket">
           <div class="product-details">
             <p class="product-name">Grey Hoodie</p>
-            <div class="product-price">Rs. 6500</div>
+            <div class="product-price"><span class="price-amount">Rs. 6,500</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option><option>M</option><option>L</option>
@@ -387,7 +393,7 @@
           <img src="M14.png" alt="Men Jacket">
           <div class="product-details">
             <p class="product-name">Denim Jacket</p>
-            <div class="product-price">Rs. 8000</div>
+            <div class="product-price"><span class="price-amount">Rs. 8,000</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option><option>M</option><option>L</option>
@@ -404,7 +410,7 @@
           <img src="M15.png" alt="Men Jacket">
           <div class="product-details">
             <p class="product-name">Puffer Jacket</p>
-            <div class="product-price">Rs. 5500</div>
+            <div class="product-price"><span class="price-amount">Rs. 5,500</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option><option>M</option><option>L</option>
@@ -421,7 +427,7 @@
           <img src="M16.png" alt="Men Jacket">
           <div class="product-details">
             <p class="product-name">Casual Bomber Jacket</p>
-            <div class="product-price">Rs. 5200</div>
+            <div class="product-price"><span class="price-amount">Rs. 5,200</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option><option>M</option><option>L</option>
@@ -439,7 +445,7 @@
   <img src="KU1.png" alt="Men Kurta">
   <div class="product-details">
     <p class="product-name">Classic White Kurta</p>
-    <div class="product-price">Rs. 3500</div>
+    <div class="product-price"><span class="price-amount">Rs. 3,500</span></div>
     <div class="selectors">
       <select>
         <option>Size: S</option><option>M</option><option>L</option><option>XL</option>
@@ -457,7 +463,7 @@
   <img src="KU2.png" alt="Men Kurta">
   <div class="product-details">
     <p class="product-name">Embroidered Kurta</p>
-    <div class="product-price">Rs. 4200</div>
+    <div class="product-price"><span class="price-amount">Rs. 4,200</span></div>
     <div class="selectors">
       <select>
         <option>Size: S</option><option>M</option><option>L</option><option>XL</option>
@@ -475,7 +481,7 @@
   <img src="KU3.png" alt="Men Kurta">
   <div class="product-details">
     <p class="product-name">Casual Linen Kurta</p>
-    <div class="product-price">Rs. 3800</div>
+    <div class="product-price"><span class="price-amount">Rs. 3,800</span></div>
     <div class="selectors">
       <select>
         <option>Size: S</option><option>M</option><option>L</option><option>XL</option>
@@ -493,7 +499,7 @@
   <img src="KU4.png" alt="Men Kurta">
   <div class="product-details">
     <p class="product-name">Traditional Black Kurta</p>
-    <div class="product-price">Rs. 4000</div>
+    <div class="product-price"><span class="price-amount">Rs. 4,000</span></div>
     <div class="selectors">
       <select>
         <option>Size: S</option><option>M</option><option>L</option><option>XL</option>
@@ -511,7 +517,7 @@
   <img src="MS1.png" alt="Men Suit">
   <div class="product-details">
     <p class="product-name">Classic Black Suit</p>
-    <div class="product-price">Rs. 12,000</div>
+    <div class="product-price"><span class="price-amount">Rs. 12,000</span></div>
     <div class="selectors">
       <select>
         <option>Size: 36</option><option>38</option><option>40</option><option>42</option>
@@ -529,7 +535,7 @@
   <img src="MS2.png" alt="Men Suit">
   <div class="product-details">
     <p class="product-name">Navy Blue Formal Suit</p>
-    <div class="product-price">Rs. 14,500</div>
+    <div class="product-price"><span class="price-amount">Rs. 14,500</span></div>
     <div class="selectors">
       <select>
         <option>Size: 36</option><option>38</option><option>40</option><option>42</option>
@@ -547,7 +553,7 @@
   <img src="MS3.png" alt="Men Suit">
   <div class="product-details">
     <p class="product-name">Gray 2-Piece Suit</p>
-    <div class="product-price">Rs. 11,000</div>
+    <div class="product-price"><span class="price-amount">Rs. 11,000</span></div>
     <div class="selectors">
       <select>
         <option>Size: 36</option><option>38</option><option>40</option><option>42</option>
@@ -565,7 +571,7 @@
   <img src="MS4.png" alt="Men Suit">
   <div class="product-details">
     <p class="product-name">Checkered Slim Fit Suit</p>
-    <div class="product-price">Rs. 15,000</div>
+    <div class="product-price"><span class="price-amount">Rs. 15,000</span></div>
     <div class="selectors">
       <select>
         <option>Size: 36</option><option>38</option><option>40</option><option>42</option>
@@ -583,7 +589,7 @@
   <img src="MT1.png" alt="Men Trousers">
   <div class="product-details">
     <p class="product-name">Slim Fit Cotton Trousers</p>
-    <div class="product-price">Rs. 2500</div>
+    <div class="product-price"><span class="price-amount">Rs. 2,500</span></div>
     <div class="selectors">
       <select>
         <option>Size: 30</option><option>32</option><option>34</option><option>36</option>
@@ -601,7 +607,7 @@
   <img src="MT2.png" alt="Men Trousers">
   <div class="product-details">
     <p class="product-name">Formal Office Trousers</p>
-    <div class="product-price">Rs. 3200</div>
+    <div class="product-price"><span class="price-amount">Rs. 3,200</span></div>
     <div class="selectors">
       <select>
         <option>Size: 30</option><option>32</option><option>34</option><option>36</option>
@@ -619,7 +625,7 @@
   <img src="MT3.png" alt="Men Trousers">
   <div class="product-details">
     <p class="product-name">Casual Chino Trousers</p>
-    <div class="product-price">Rs. 2800</div>
+    <div class="product-price"><span class="price-amount">Rs. 2,800</span></div>
     <div class="selectors">
       <select>
         <option>Size: 30</option><option>32</option><option>34</option><option>36</option>
@@ -637,7 +643,7 @@
   <img src="MT4.png" alt="Men Trousers">
   <div class="product-details">
     <p class="product-name">Stretch Fit Jogger Trousers</p>
-    <div class="product-price">Rs. 3000</div>
+    <div class="product-price"><span class="price-amount">Rs. 3,000</span></div>
     <div class="selectors">
       <select>
         <option>Size: 30</option><option>32</option><option>34</option><option>36</option>

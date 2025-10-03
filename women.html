@@ -22,6 +22,9 @@
       font-size: 2.5rem;
       margin-bottom: 10px;
     }
+.banner-section {
+  margin-top: 70px;
+}
 
     /* === Product Grid === */
     .featured-products {
@@ -44,15 +47,16 @@
 
     .product-card {
       background: #efeaea;
-      border: 1px solid #e0e0e0;
+      border: 2px solid #b48167;
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
-      transition: transform 0.2s;
+      transition: transform 0.2s, border-color 0.3s;
     }
 
     .product-card:hover {
       transform: translateY(-5px);
+      border-color: #ff3366;
     }
 
     .product-card img {
@@ -106,7 +110,7 @@
     }
 
     .add-to-cart-btn:hover {
-      background: #f10404;
+      background: #ab0741;
     }
   </style>
 </head>
@@ -165,7 +169,7 @@
           <img src="w1.png" alt="Dress">
           <div class="product-details">
             <p class="product-name">Elegant Floral Dress</p>
-            <div class="product-price">Rs. 5500</div>
+            <div class="product-price"><span class="price-amount">Rs. 5,500</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -188,7 +192,7 @@
           <img src="w2.png" alt="Dress">
           <div class="product-details">
             <p class="product-name">Casual Floral Dress</p>
-            <div class="product-price">Rs. 4000</div>
+            <div class="product-price"><span class="price-amount">Rs. 4,000</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -210,7 +214,7 @@
           <img src="w3.png" alt="Dress">
           <div class="product-details">
             <p class="product-name">Party Wear Dress</p>
-            <div class="product-price">Rs. 6000</div>
+            <div class="product-price"><span class="price-amount">Rs. 6,000</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -232,7 +236,7 @@
           <img src="w4.png" alt="Dress">
           <div class="product-details">
             <p class="product-name">Summer Cotton Dress</p>
-            <div class="product-price">Rs. 3500</div>
+            <div class="product-price"><span class="price-amount">Rs. 3,500</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -255,7 +259,7 @@
           <img src="w5.png" alt="Top">
           <div class="product-details">
             <p class="product-name">Casual Women Top</p>
-            <div class="product-price">Rs. 2200</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,200</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -277,7 +281,7 @@
           <img src="w6.png" alt="Top">
           <div class="product-details">
             <p class="product-name">Striped Cotton Top</p>
-            <div class="product-price">Rs. 2500</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,500</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -299,7 +303,7 @@
           <img src="w7.png" alt="Top">
           <div class="product-details">
             <p class="product-name">Printed Summer Top</p>
-            <div class="product-price">Rs. 2700</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,700</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -321,7 +325,7 @@
           <img src="w8.png" alt="Top">
           <div class="product-details">
             <p class="product-name">Formal Women Top</p>
-            <div class="product-price">Rs. 3000</div>
+            <div class="product-price"><span class="price-amount">Rs. 3,000</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -344,7 +348,7 @@
           <img src="w9.png" alt="Trousers">
           <div class="product-details">
             <p class="product-name">Slim Fit Trousers</p>
-            <div class="product-price">Rs. 3200</div>
+            <div class="product-price"><span class="price-amount">Rs. 3,200</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -366,7 +370,7 @@
           <img src="w10.png" alt="Trousers">
           <div class="product-details">
             <p class="product-name">Casual Cotton Trousers</p>
-            <div class="product-price">Rs. 2800</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,800</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -388,7 +392,7 @@
           <img src="w11.png" alt="Trousers">
           <div class="product-details">
             <p class="product-name">High Waist Trousers</p>
-            <div class="product-price">Rs. 3500</div>
+            <div class="product-price"><span class="price-amount">Rs. 3,500</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -410,7 +414,7 @@
           <img src="w12.png" alt="Trousers">
           <div class="product-details">
             <p class="product-name">Formal Trousers</p>
-            <div class="product-price">Rs. 3700</div>
+            <div class="product-price"><span class="price-amount">Rs. 3,700</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -433,7 +437,7 @@
           <img src="w13.png" alt="Pants">
           <div class="product-details">
             <p class="product-name">Blue Pants</p>
-            <div class="product-price">Rs. 4000</div>
+            <div class="product-price"><span class="price-amount">Rs. 4,000</span></div>
             <div class="selectors">
               <select>
                 <option>Size: 28</option>
@@ -455,7 +459,7 @@
           <img src="w14.png" alt="Pants">
           <div class="product-details">
             <p class="product-name">Ripped Women Pants</p>
-            <div class="product-price">Rs. 4200</div>
+            <div class="product-price"><span class="price-amount">Rs. 4,200</span></div>
             <div class="selectors">
               <select>
                 <option>Size: 28</option>
@@ -477,7 +481,7 @@
           <img src="w15.png" alt="Pants">
           <div class="product-details">
             <p class="product-name">Classic Fit Pants</p>
-            <div class="product-price">Rs. 3900</div>
+            <div class="product-price"><span class="price-amount">Rs. 3,900</span></div>
             <div class="selectors">
               <select>
                 <option>Size: 28</option>
@@ -499,7 +503,7 @@
           <img src="w16.png" alt="Pants">
           <div class="product-details">
             <p class="product-name">High Rise Pants</p>
-            <div class="product-price">Rs. 4500</div>
+            <div class="product-price"><span class="price-amount">Rs. 4,500</span></div>
             <div class="selectors">
               <select>
                 <option>Size: 28</option>
@@ -521,7 +525,7 @@
   <img src="ti1.png" alt="Tights">
   <div class="product-details">
     <p class="product-name">Stretch Fit Tights</p>
-    <div class="product-price">Rs. 2200</div>
+    <div class="product-price"><span class="price-amount">Rs. 2,200</span></div>
     <div class="selectors">
       <select>
         <option>Size: S</option>
@@ -543,7 +547,7 @@
   <img src="ti2.png" alt="Tights">
   <div class="product-details">
     <p class="product-name">Casual Cotton Tights</p>
-    <div class="product-price">Rs. 2000</div>
+    <div class="product-price"><span class="price-amount">Rs. 2,000</span></div>
     <div class="selectors">
       <select>
         <option>Size: S</option>
@@ -565,7 +569,7 @@
   <img src="ti3.png" alt="Tights">
   <div class="product-details">
     <p class="product-name">Printed Stretch Tights</p>
-    <div class="product-price">Rs. 2500</div>
+    <div class="product-price"><span class="price-amount">Rs. 2,500</span></div>
     <div class="selectors">
       <select>
         <option>Size: S</option>
@@ -587,7 +591,7 @@
   <img src="ti4.png" alt="Tights">
   <div class="product-details">
     <p class="product-name">Slim Fit Tights</p>
-    <div class="product-price">Rs. 2400</div>
+    <div class="product-price"><span class="price-amount">Rs. 2,400</span></div>
     <div class="selectors">
       <select>
         <option>Size: S</option>
@@ -609,7 +613,7 @@
   <img src="tw1.png" alt="Traditional Wear">
   <div class="product-details">
     <p class="product-name">Embroidered Kurta</p>
-    <div class="product-price">Rs. 5000</div>
+    <div class="product-price"><span class="price-amount">Rs. 5,000</span></div>
     <div class="selectors">
       <select>
         <option>Size: S</option>
@@ -631,7 +635,7 @@
   <img src="tw2.png" alt="Traditional Wear">
   <div class="product-details">
     <p class="product-name">Classic Shalwar Kameez</p>
-    <div class="product-price">Rs. 4500</div>
+    <div class="product-price"><span class="price-amount">Rs. 4,500</span></div>
     <div class="selectors">
       <select>
         <option>Size: S</option>
@@ -653,7 +657,7 @@
   <img src="tw3.png" alt="Traditional Wear">
   <div class="product-details">
     <p class="product-name">Silk Traditional Outfit</p>
-    <div class="product-price">Rs. 6000</div>
+    <div class="product-price"><span class="price-amount">Rs. 6,000</span></div>
     <div class="selectors">
       <select>
         <option>Size: S</option>
@@ -675,7 +679,7 @@
   <img src="tw4.png" alt="Traditional Wear">
   <div class="product-details">
     <p class="product-name">Festive Wear Kurta</p>
-    <div class="product-price">Rs. 5200</div>
+    <div class="product-price"><span class="price-amount">Rs. 5,200</span></div>
     <div class="selectors">
       <select>
         <option>Size: S</option>
@@ -698,7 +702,7 @@
   <img src="sh1.png" alt="Shawl">
   <div class="product-details">
     <p class="product-name">Woolen Winter Shawl</p>
-    <div class="product-price">Rs. 3200</div>
+    <div class="product-price"><span class="price-amount">Rs. 3,200</span></div>
     <div class="selectors">
       <select>
         <option>Size: Standard</option>
@@ -718,7 +722,7 @@
   <img src="sh2.png" alt="Shawl">
   <div class="product-details">
     <p class="product-name">Pashmina Embroidered Shawl</p>
-    <div class="product-price">Rs. 4500</div>
+    <div class="product-price"><span class="price-amount">Rs. 4,500</span></div>
     <div class="selectors">
       <select>
         <option>Size: Standard</option>
@@ -738,7 +742,7 @@
   <img src="sh3.png" alt="Shawl">
   <div class="product-details">
     <p class="product-name">Cashmere Classic Shawl</p>
-    <div class="product-price">Rs. 5000</div>
+    <div class="product-price"><span class="price-amount">Rs. 5,000</span></div>
     <div class="selectors">
       <select>
         <option>Size: Standard</option>
@@ -758,7 +762,7 @@
   <img src="sh4.png" alt="Shawl">
   <div class="product-details">
     <p class="product-name">Designer Party Shawl</p>
-    <div class="product-price">Rs. 6000</div>
+    <div class="product-price"><span class="price-amount">Rs. 6,000</span></div>
     <div class="selectors">
       <select>
         <option>Size: Standard</option>
@@ -778,7 +782,7 @@
   <img src="WJ1.png" alt="Jacket">
   <div class="product-details">
     <p class="product-name">Denim Casual Jacket</p>
-    <div class="product-price">Rs. 4500</div>
+    <div class="product-price"><span class="price-amount">Rs. 4,500</span></div>
     <div class="selectors">
       <select>
         <option>Size: S</option>
@@ -800,7 +804,7 @@
   <img src="WJ2.png" alt="Jacket">
   <div class="product-details">
     <p class="product-name">Leather Formal Jacket</p>
-    <div class="product-price">Rs. 8500</div>
+    <div class="product-price"><span class="price-amount">Rs. 8,500</span></div>
     <div class="selectors">
       <select>
         <option>Size: S</option>
@@ -822,7 +826,7 @@
   <img src="WJ3.png" alt="Jacket">
   <div class="product-details">
     <p class="product-name">Winter Puffer Jacket</p>
-    <div class="product-price">Rs. 6000</div>
+    <div class="product-price"><span class="price-amount">Rs. 6,000</span></div>
     <div class="selectors">
       <select>
         <option>Size: S</option>
@@ -844,7 +848,7 @@
   <img src="WJ4.png" alt="Jacket">
   <div class="product-details">
     <p class="product-name">Trendy Bomber Jacket</p>
-    <div class="product-price">Rs. 5200</div>
+    <div class="product-price"><span class="price-amount">Rs. 5,200</span></div>
     <div class="selectors">
       <select>
         <option>Size: S</option>

@@ -23,6 +23,9 @@
       font-size: 2.5rem;
       margin-bottom: 10px;
     }
+ .banner-section {
+  margin-top: 70px; 
+}
 
     /* === Product Grid === */
     .featured-products {
@@ -45,15 +48,16 @@
 
     .product-card {
       background: #efeaea;
-      border: 1px solid #e0e0e0;
+      border: 2px solid #b48167;
       border-radius: 10px;
       overflow: hidden;
       box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
-      transition: transform 0.2s;
+      transition: transform 0.2s, border-color 0.3s;
     }
 
     .product-card:hover {
       transform: translateY(-5px);
+      border-color: #ff3366;
     }
 
     .product-card img {
@@ -107,7 +111,7 @@
     }
 
     .add-to-cart-btn:hover {
-      background: #f10404;
+      background: #ab0741;
     }
   </style>
 </head>
@@ -166,7 +170,7 @@
           <img src="ki1.png" alt="Frock">
           <div class="product-details">
             <p class="product-name">Floral Party Frock</p>
-            <div class="product-price">Rs.  4,999</div>
+            <div class="product-price"><span class="price-amount">Rs. 4,999</span></div>
             <div class="selectors">
               <select>
                 <option>Size: 2y</option>
@@ -189,7 +193,7 @@
           <img src="ki2.png" alt="Frock">
           <div class="product-details">
             <p class="product-name">Casual Cotton Frock</p>
-            <div class="product-price">Rs. 1800</div>
+            <div class="product-price"><span class="price-amount">Rs. 1,800</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -212,7 +216,7 @@
           <img src="ki3.png" alt="Frock">
           <div class="product-details">
             <p class="product-name">Kids Summer Frock</p>
-            <div class="product-price">Rs. 2000</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,000</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -235,7 +239,7 @@
           <img src="ki4.png" alt="Frock">
           <div class="product-details">
             <p class="product-name">Printed Girls Frock</p>
-            <div class="product-price">Rs. 2400</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,400</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -260,7 +264,7 @@
           <img src="ki5.png" alt="Shirt">
           <div class="product-details">
             <p class="product-name">Boys Casual Shirt</p>
-            <div class="product-price">Rs. 1500</div>
+            <div class="product-price"><span class="price-amount">Rs. 1,500</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -283,7 +287,7 @@
           <img src="ki6.png" alt="Shirt">
           <div class="product-details">
             <p class="product-name">Plaid Kids Shirt</p>
-            <div class="product-price">Rs. 1600</div>
+            <div class="product-price"><span class="price-amount">Rs. 1,600</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -307,7 +311,7 @@
           <img src="ki7.png" alt="Shirt">
           <div class="product-details">
             <p class="product-name">Printed Summer Shirt</p>
-            <div class="product-price">Rs. 1700</div>
+            <div class="product-price"><span class="price-amount">Rs. 1,700</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -330,7 +334,7 @@
           <img src="ki8.png" alt="Shirt">
           <div class="product-details">
             <p class="product-name">Formal Kids Shirt</p>
-            <div class="product-price">Rs. 1900</div>
+            <div class="product-price"><span class="price-amount">Rs. 1,900</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -355,7 +359,7 @@
           <img src="ki9.png" alt="Trousers">
           <div class="product-details">
             <p class="product-name">Casual Boys Trousers</p>
-            <div class="product-price">Rs. 2000</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,000</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -378,7 +382,7 @@
           <img src="ki10.png" alt="Trousers">
           <div class="product-details">
             <p class="product-name">Slim Fit Trousers</p>
-            <div class="product-price">Rs. 2100</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,100</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -401,7 +405,7 @@
           <img src="ki11.png" alt="Trousers">
           <div class="product-details">
             <p class="product-name">Denim Trousers</p>
-            <div class="product-price">Rs. 2300</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,300</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -424,7 +428,7 @@
           <img src="ki12.png" alt="Trousers">
           <div class="product-details">
             <p class="product-name">Cotton Trousers</p>
-            <div class="product-price">Rs. 2200</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,200</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -449,7 +453,7 @@
           <img src="ki13.png" alt="Jeans">
           <div class="product-details">
             <p class="product-name">Blue Kids Jeans</p>
-            <div class="product-price">Rs. 2400</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,400</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -472,7 +476,7 @@
           <img src="ki14.png" alt="Jeans">
           <div class="product-details">
             <p class="product-name">Dark Wash Jeans</p>
-            <div class="product-price">Rs. 2500</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,500</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -495,7 +499,7 @@
           <img src="ki15.png" alt="Jeans">
           <div class="product-details">
             <p class="product-name">Ripped Kids Jeans</p>
-            <div class="product-price">Rs. 2600</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,600</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>
@@ -518,7 +522,7 @@
           <img src="ki16.png" alt="Jeans">
           <div class="product-details">
             <p class="product-name">Classic Fit Jeans</p>
-            <div class="product-price">Rs. 2700</div>
+            <div class="product-price"><span class="price-amount">Rs. 2,700</span></div>
             <div class="selectors">
               <select>
                 <option>Size: S</option>

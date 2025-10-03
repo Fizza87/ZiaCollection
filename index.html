@@ -656,6 +656,24 @@ if (initialCategoryFromURL) {
 </div>
 
 <script src="cart.js"></script>
+
+<script>
+document.querySelectorAll(".has-dropdown").forEach(item => {
+  let timeout;
+
+  item.addEventListener("mouseenter", () => {
+    clearTimeout(timeout);
+    item.querySelector(".dropdown").style.display = "flex"; 
+  });
+
+  item.addEventListener("mouseleave", () => {
+    timeout = setTimeout(() => {
+      item.querySelector(".dropdown").style.display = "none"; 
+    }, 400); 
+  });
+});
+</script>
+
         
 </body>
 </html>
