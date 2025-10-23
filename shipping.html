@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shipping Charges - Zia Collection</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== THEME MATCHED TO FAQ PAGE ===== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfaf6;
+      color: #1C352D;
+    }
+
+    /* ===== Header ===== */
+    .site-header {
+      background: linear-gradient(to bottom, rgba(28, 53, 45, 0.9), rgba(28, 53, 45, 0.6));
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .site-header .nav-link.active {
+      color: #fdfaf6;
+      font-weight: bold;
+    }
+
+    /* ===== Content Box ===== */
+    .info-page {
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      line-height: 1.6;
+    }
+
+    .info-page h1 {
+      color: #305c4e;
+      text-align: center;
+      margin-bottom: 20px;
+      text-decoration: underline;
+    }
+
+    .info-section {
+      margin-bottom: 40px;
+    }
+
+    .info-section h2 {
+      color: #9D9D00;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #1C352D;
+      display: inline-block;
+      padding-bottom: 5px;
+      text-decoration: underline;
+    }
+
+    .info-section h3 {
+      color: #305c4e;
+      text-decoration: underline;
+      margin-bottom: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table th, table td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+
+    table th {
+      background-color: #1C352D;
+      color: #fff;
+    }
+
+    ul {
+      margin: 15px 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    /* ===== Equal Height Boxes ===== */
+ .columns {
+  display: flex;
+  flex-wrap: nowrap; /* single row */
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: space-between; /* boxes evenly spread */
+}
+
+.column {
+  flex: 1; /* sab boxes equal width */
+  background-color: #f8f8f3;
+  border: 1px solid #dcdcd2;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 300px; /* fixed height for all boxes */
+  max-width: 32%; /* 3 boxes in a row with some gap */
+}
+
+
+    .column:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .column h3 {
+      text-align: center;
+      font-size: 18px;
+      color: #305c4e;
+      margin-bottom: 15px;
+    }
+
+    .column p, .column ul {
+      text-align: center;
+      margin-top: 10px;
+      flex-grow: 1;
+    }
+
+    .column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .column ul li {
+      margin-bottom: 8px;
+    }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 40px 20px 20px 20px;
+    }
+
+    .site-footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .site-footer a:hover {
+      text-decoration: underline;
+      color: #9D9D00;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .columns {
+        flex-direction: column;
+      }
+      .column {
+        min-height: auto; /* let them adjust on smaller screens */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .info-page {
+        padding: 20px;
+      }
+
+      .site-header {
+        padding: 15px 0;
+      }
+
+      .info-page h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="index.html"><img src="logo.png" class="logo-img" alt="Logo"></a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shipping.html" class="nav-link active">Shipping</a></li>
+          <li><a href="track.html" class="nav-link">Track Order</a></li>
+          <li><a href="stores.html" class="nav-link">Find Stores</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <button class="icon-btn" id="cartIcon">
+          <img src="cart.png" class="icon-img" alt="Cart">
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-content-wrapper">
+    <section class="info-page">
+      <h1>Shipping Charges & Delivery Information</h1>
+      <p>At <b>Zia Collection</b>, we aim to make your shopping experience as smooth as possible. Below are our detailed shipping rates, delivery timeframes, and policies.</p>
+
+      <div class="info-section">
+        <h2>Shipping Rates</h2>
+        <table>
+          <tr>
+            <th>Destination</th>
+            <th>Order Value</th>
+            <th>Shipping Charges</th>
+            <th>Estimated Delivery Time</th>
+          </tr>
+          <tr>
+            <td>Within Pakistan</td>
+            <td>Below Rs. 5000</td>
+            <td>Rs. 200</td>
+            <td>3–5 Business Days</td>
+          </tr>
+          <tr>
+            <td>Within Pakistan</td>
+            <td>Above Rs. 5000</td>
+            <td><b>Free</b></td>
+            <td>3–5 Business Days</td>
+          </tr>
+          <tr>
+            <td>International</td>
+            <td>All Orders</td>
+            <td>Calculated at Checkout</td>
+            <td>7–14 Business Days</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="info-section">
+        <h2>More About Our Delivery Process</h2>
+        <div class="columns">
+          <div class="column">
+            <h3>🕒 Delivery Time</h3>
+            <p>Orders are processed within 24 hours. Once shipped, you’ll receive a confirmation email and SMS with tracking details. Delivery may take longer during sales or public holidays.</p>
+          </div>
+
+          <div class="column">
+            <h3>💳 Payment Options</h3>
+            <ul>
+              <li>Cash on Delivery (COD) available nationwide</li>
+              <li>Credit/Debit Card payments accepted</li>
+              <li>Bank transfer for custom orders</li>
+            </ul>
+          </div>
+
+          <div class="column">
+            <h3>🔁 Return Policy</h3>
+            <p>If you receive a damaged or incorrect item, please contact our support within 3 days. Returns are accepted only for unused items with original tags.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-section">
+        <h2>Important Notes</h2>
+        <ul>
+          <li>Customers are responsible for providing correct shipping details. Incorrect addresses may cause delivery delays.</li>
+          <li>In remote areas, delivery may take up to 7 business days.</li>
+          <li>We do not ship to P.O. boxes or military addresses at this time.</li>
+          <li>International customers are responsible for customs or import duties.</li>
+        </ul>
+      </div>
+
+      <div class="info-section">
+        <h2>Need Help?</h2>
+        <p>If you have questions about shipping or tracking, feel free to reach out:</p>
+        <ul>
+          <li><b>Email:</b> support@ziacollection.com</li>
+          <li><b>Phone:</b> +92 300 1234567</li>
+          <li><b>Hours:</b> Monday–Saturday, 10:00 AM to 7:00 PM</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <p class="bottom-footer-text">© 2025 Zia Collection. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

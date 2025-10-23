@@ -7,82 +7,103 @@
     <style>
         /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Helvetica Neue", Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #F5F5DC; 
-            color: #4B2E1D; 
+            background-color: #fdfaf6; /* light neutral from theme */
+            color: #1C352D; /* dark green text */
+            line-height: 1.8; /* airy paragraphs */
         }
 
         header {
-            background-color: #ab0741; 
-            color: white;
-            padding: 20px 0;
+            background: linear-gradient(to bottom, rgba(28, 53, 45, 0.9), rgba(28, 53, 45, 0.6));
+            color: #fff;
+            padding: 25px 0;
             text-align: center;
+            position: relative;
         }
 
         header h1 {
             margin: 0;
-            font-size: 28px;
+            font-size: 32px;
+            letter-spacing: 1px;
         }
+
         .home-icon {
-    width: 60px;   /* icon ka size */
-    height: 55px;
-    position: absolute;
-    left: 20px;   /* left corner */
-    top: 10px;    /* thoda upar se neeche */
-    cursor: pointer;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* hand cursor jab hover kare */
-}
-.home-icon:hover {
-    transform: scale(1.2); /* thoda bara ho jaye hover pe */
-    opacity: 0.8;          /* thoda fade effect */
-}
+            width: 60px;
+            height: 55px;
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            cursor: pointer;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .home-icon:hover {
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
 
         main {
             max-width: 900px;
-            margin: 30px auto;
-            padding: 0 20px;
+            margin: 50px auto; /* upar neeche zyada */
+            padding: 0 30px;   /* horizontal padding increase */
         }
 
         h2 {
-            color: #b48167;
-            text-decoration: underline; /* Coffee */
-            margin-top: 30px;
+            color: #9D9D00; /* olive accent */
+            text-decoration: underline;
+            margin: 50px 0 20px 0; /* upar neeche spacing */
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 1px;  /* headings thodi airy */
         }
 
         h3 {
-            color: #b48167; /* Saddle Brown */
-            margin-top: 20px;
-            text-decoration: underline
+            color: #305c4e; /* dark green accent */
+            margin: 30px 0 15px 0;
+            text-decoration: underline;
+            letter-spacing: 0.8px;
         }
 
         p {
-            font-size: 16px;
-            line-height: 1.6;
+            font-size: 17px;
+            line-height: 1.8;
+            color: #1C352D;
+            margin-bottom: 20px; /* paragraphs ke beech thoda gap */
         }
 
-        /* Footer Styles (black) */
+        a {
+            color: #9D9D00;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #1C352D;
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
         .site-footer {
-            background-color: #000; /* Black background */
-            color: white;
-            padding: 40px 20px 20px 20px;
+            background: #000;
+            color: #fff;
+            padding: 50px 20px 20px;
         }
 
         .site-footer a {
             color: #fff;
             text-decoration: none;
+            transition: color 0.3s ease;
         }
 
         .site-footer a:hover {
+            color: #9D9D00;
             text-decoration: underline;
-            color : #ab0741
         }
 
         .footer-top {
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
+            gap: 50px; /* columns ke beech aur space */
             justify-content: center;
             margin-bottom: 30px;
         }
@@ -99,76 +120,75 @@
         }
 
         .footer-column ul li {
-            margin-bottom: 8px;
+            margin-bottom: 12px; /* list items ke beech aur space */
         }
 
         .footer-bottom {
             text-align: center;
+            margin-top: 20px;
         }
 
         .social-links a img {
-            width: 30px;
+            width: 32px;
             margin: 0 5px;
             vertical-align: middle;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .social-links a:hover img {
+            transform: scale(1.2);
+            opacity: 0.8;
         }
 
         /* Responsive */
         @media (max-width: 600px) {
             header h1 {
-                font-size: 22px;
+                font-size: 24px;
             }
 
             main {
-                padding: 0 10px;
+                padding: 0 15px;
             }
 
             .footer-top {
                 flex-direction: column;
                 align-items: center;
+                gap: 30px;
             }
         }
-        .site-footer .social-links a img {
-    transition: transform 0.3s ease, opacity 0.3s ease; 
-}
-
-.site-footer .social-links a:hover img {
-    transform: scale(1.2); 
-    opacity: 0.8;          
-}
-
     </style>
 </head>
 <body>
     <header>
         <a href="index.html">
-  <img src="Home.png" alt="Home" class="home-icon">
-</a>
-
+            <img src="Home.png" alt="Home" class="home-icon">
+        </a>
         <h1>About Us</h1>
     </header>
 
     <main>
-    <section class="about-intro">
-        <h2 style="text-align: center;">Welcome to Zia Collections</h2>
-        <p>Zia Collections is a premier fashion brand committed to delivering high-quality clothing and accessories. We focus on creating trendy, comfortable, and affordable fashion that empowers individuals to express themselves confidently every day.</p>
-    </section>
+        <section class="about-intro">
+            <h2>Welcome to Zia Collections</h2>
+            <p>Zia Collections is a premier fashion brand committed to delivering high-quality clothing and accessories. We focus on creating trendy, comfortable, and affordable fashion that empowers individuals to express themselves confidently every day.</p>
+        </section>
 
-    <section class="about-mission">
-        <h2 style="text-align: center;">Our Mission</h2>
-        <p>Our mission is to inspire and empower people through fashion. We believe that clothing is more than style; it is a way to express personality, confidence, and individuality in every moment.</p>
-    </section>
+        <section class="about-mission">
+            <h2>Our Mission</h2>
+            <p>Our mission is to inspire and empower people through fashion. We believe that clothing is more than style; it is a way to express personality, confidence, and individuality in every moment.</p>
+        </section>
 
-    <section class="about-vision">
-        <h2 style="text-align: center;">Our Vision</h2>
-        <p>We aim to become a globally recognized brand known for quality, innovation, and exceptional customer satisfaction. Ethical practices and sustainability guide all our efforts in the fashion industry.</p>
-    </section>
+        <section class="about-vision">
+            <h2>Our Vision</h2>
+            <p>We aim to become a globally recognized brand known for quality, innovation, and exceptional customer satisfaction. Ethical practices and sustainability guide all our efforts in the fashion industry.</p>
+        </section>
 
-    <section class="about-team">
-        <h2 style="text-align: center;">Meet Our Team</h2>
-        <p>Our team of talented designers, stylists, and fashion experts work passionately to bring you the latest trends. Every member is dedicated to creating a unique fashion experience for our customers.</p>
-    </section>
-</main>
-    <!-- Footer (black) -->
+        <section class="about-team">
+            <h2>Meet Our Team</h2>
+            <p>Our team of talented designers, stylists, and fashion experts work passionately to bring you the latest trends. Every member is dedicated to creating a unique fashion experience for our customers.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-top">
             <div class="footer-column">
@@ -197,7 +217,7 @@
                 <a href="#"><img src="facebook.png" alt="Facebook"></a>
                 <a href="#"><img src="instagram.png" alt="Instagram"></a>
                 <a href="#"><img src="twitter.png" alt="Twitter"></a>
-                <a href="#"><img src="youtube.png" alt="youtube"></a>
+                <a href="#"><img src="youtube.png" alt="YouTube"></a>
             </div>
         </div>
     </footer>

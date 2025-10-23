@@ -10,37 +10,37 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #F5F5DC; 
-      color: #4B2E1D; 
+      background-color: #f5f1f1; /* light neutral */
+      color: #1C352D; /* dark green text */
     }
 
-    header {
-      background-color: #ab0741; 
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-    }
-
+header {
+  background: linear-gradient(to bottom, rgba(28, 53, 45, 0.9), rgba(28, 53, 45, 0.6));
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
     header h1 {
       margin: 0;
       font-size: 28px;
-      font-style: italic; /* italic header */
-      text-decoration: underline; /* underline main heading */
+      font-style: italic;
+      text-decoration: underline;
     }
-    .home-icon {
-    width: 50px;   /* icon ka size */
-    height: 50px;
-    position: absolute;
-    left: 20px;   /* left corner */
-    top: 10px;    /* thoda upar se neeche */
-    cursor: pointer;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* hand cursor jab hover kare */
-}
-.home-icon:hover {
-    transform: scale(1.2); /* thoda bara ho jaye hover pe */
-    opacity: 0.8;          /* thoda fade effect */
-}
 
+    .home-icon {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: 20px;
+      top: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .home-icon:hover {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
 
     main {
       max-width: 900px;
@@ -51,7 +51,7 @@
     h2 {
       text-align: left;
       text-decoration: underline;
-      color: #b48167;
+      color: #9D9D00; /* olive accent */
       margin-top: 30px;
     }
 
@@ -64,7 +64,7 @@
 
     /* Footer Styles */
     .site-footer {
-      background-color: #000;
+      background-color: #1C352D; /* dark green footer */
       color: white;
       padding: 40px 20px 20px 20px;
     }
@@ -76,7 +76,7 @@
 
     .site-footer a:hover {
       text-decoration: underline;
-      color: #ab0741;
+      color: #9D9D00; /* olive accent */
     }
 
     .footer-top {
@@ -136,9 +136,8 @@
 <body>
   <header>
     <a href="index.html">
-  <img src="Home.png" alt="Home" class="home-icon">
-</a>
-
+      <img src="Home.png" alt="Home" class="home-icon">
+    </a>
     <h1>Terms & Conditions</h1>
   </header>
 
@@ -192,7 +191,6 @@
         <a href="#"><img src="instagram.png" alt="Instagram"></a>
         <a href="#"><img src="twitter.png" alt="Twitter"></a>
         <a href="#"><img src="youtube.png" alt="YouTube"></a>
-  
       </div>
     </div>
   </footer>

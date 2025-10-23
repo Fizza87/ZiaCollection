@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Your Order - Zia Collection</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfaf6; /* light neutral background */
+      color: #1C352D; /* dark green text */
+    }
+
+    header.site-header {
+      background: linear-gradient(to bottom, rgba(28, 53, 45, 0.9), rgba(28, 53, 45, 0.6));
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      font-style: italic;
+      text-decoration: underline;
+    }
+
+    .track-form {
+      max-width: 500px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .track-form input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .track-form button {
+      background: #1C352D; /* dark green button */
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .track-form button:hover {
+      background: #9D9D00; /* olive accent hover */
+    }
+
+    footer.site-footer {
+      background-color: #000;
+      color: white;
+      padding: 40px 20px 20px 20px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: #9D9D00; /* olive accent */
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="index.html"><img src="logo.png" class="logo-img" alt="Logo"></a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shipping.html" class="nav-link">Shipping</a></li>
+          <li><a href="track.html" class="nav-link active">Track Order</a></li>
+          <li><a href="stores.html" class="nav-link">Find Stores</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <button class="icon-btn"><img src="cart.png" class="icon-img" alt="Cart"></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-content-wrapper">
+    <section class="info-page">
+      <h1>Track Your Order</h1>
+      <p>Enter your order number below to check the latest status of your delivery.</p>
+      <div class="track-form">
+        <input type="text" placeholder="Enter your Order ID (e.g., ZC12345)">
+        <button>Track Now</button>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <p class="bottom-footer-text">© 2025 Zia Collection. All rights reserved.</p>
+  </footer>
+</body>
+</html>

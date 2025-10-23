@@ -7,112 +7,117 @@
   <title>Zia Collections - Women</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* === Banner === */
-    .women-banner {
-      background: url('womenbanner.png') center/cover no-repeat;
-      height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: rgb(239, 234, 234);
-    }
+  /* === Banner === */
+  .women-banner {
+    
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff; /* bright text for dark overlay contrast */
+  }
 
-    .women-banner .banner-content h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-.banner-section {
-  margin-top: 70px;
-}
+  .women-banner .banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
 
-    /* === Product Grid === */
-    .featured-products {
-      padding: 40px 20px;
-      background: #f0e5ca;
-    }
+  .banner-section {
+    margin-top: 70px;
+  }
 
-    .featured-products h2 {
-      text-align: center;
-      margin-bottom: 30px;
-      font-size: 2rem;
-      color: #090808;
-    }
+  /* === Product Grid === */
+  .featured-products {
+    padding: 40px 20px;
+    background: #1C352D; /* main site dark green */
+  }
 
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 20px;
-    }
+  .featured-products h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    color: #F5F5DC; /* soft beige for readability */
+  }
 
-    .product-card {
-      background: #efeaea;
-      border: 2px solid #b48167;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
-      transition: transform 0.2s, border-color 0.3s;
-    }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+  }
 
-    .product-card:hover {
-      transform: translateY(-5px);
-      border-color: #ff3366;
-    }
+  .product-card {
+    background: #f0f0f0;
+    border: 2px solid #9D9D00; /* olive accent */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, border-color 0.3s;
+  }
 
-    .product-card img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-    }
+  .product-card:hover {
+    transform: translateY(-5px);
+    border-color: #1C352D; /* golden hover */
+  }
 
-    .product-details {
-      padding: 15px;
-      text-align: center;
-    }
+  .product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
 
-    .product-name {
-      font-size: 1.1rem;
-      font-weight: bold;
-      margin-bottom: 8px;
-      color: #141414;
-    }
+  .product-details {
+    padding: 15px;
+    text-align: center;
+  }
 
-    .product-price {
-      margin-bottom: 10px;
-      font-size: 1rem;
-      color: #141414;
-    }
+  .product-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #1C352D; /* theme text color */
+  }
 
-    .selectors {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 10px;
-    }
+  .product-price {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #1C352D;
+  }
 
-    select,
-    input[type="number"] {
-      padding: 6px;
-      border-radius: 5px;
-      border: 1px solid #141414;
-      font-size: 0.9rem;
-    }
+  .selectors {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
 
-    .add-to-cart-btn {
-      background: #111111;
-      color: #f4f0f0;
-      border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 0.9rem;
-      transition: background 0.3s;
-    }
+  select,
+  input[type="number"] {
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #A6B28B; /* olive border */
+    font-size: 0.9rem;
+  }
 
-    .add-to-cart-btn:hover {
-      background: #ab0741;
-    }
-  </style>
+  .add-to-cart-btn {
+    background:  linear-gradient(135deg, #1C352D, #9D9D00); /* theme gradient */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s, transform 0.2s;
+  }
+
+  .add-to-cart-btn:hover {
+    background: linear-gradient(135deg, #9D9D00, #1C352D); 
+    color:white;
+    transform: translateY(-2px);
+  }
+</style>
+
+  
 </head>
 
 <body>
@@ -131,7 +136,7 @@
         <ul class="nav-list">
           <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="Sales.html" class="nav-link">Sales</a></li>
-          <li class="nav-item"><a href="NewArrivals.html" class="nav-link">New Arrivals</a></li>
+          <a href="index.html?category=all#featured-products" class="nav-link">New Arrivals</a>
           <li class="nav-item"><a href="kids.html" class="nav-link">Kids</a></li>
           <li class="nav-item"><a href="women.html" class="nav-link active">Women</a></li>
           <li class="nav-item"><a href="men.html" class="nav-link">Men</a></li>
@@ -142,7 +147,7 @@
       <div class="header-right">
         <button class="icon-btn"><img src="search.png" alt="Search" class="icon-img"></button>
         <button class="icon-btn"><img src="login.png" alt="Login" class="icon-img"></button>
-        <button class="icon-btn"><img src="cart.png" alt="Cart" class="icon-img"></button>
+        <button id="cartIcon" class="icon-btn"><img src="cart.png" alt="Cart" class="icon-img"></button>
       </div>
     </div>
   </header>

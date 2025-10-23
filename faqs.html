@@ -3,44 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQs</title>
+  <title>FAQs - Zia Collections</title>
   <style>
     /* General Styles */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #F5F5DC; /* Beige background */
-      color: #4B2E1D; /* Dark brown text */
+      background-color: #fdfaf6; /* light beige */
+      color: #1C352D; /* dark green text */
     }
 
+    /* Header */
     header {
-      background-color: #ab0741; /* Saddle Brown */
-      color: white;
+      background: linear-gradient(to bottom, rgba(28,53,45,0.9), rgba(28,53,45,0.6)); /* dark green gradient */
+      color: #fff;
       padding: 20px 0;
       text-align: center;
+      position: relative;
     }
 
     header h1 {
       margin: 0;
       font-size: 28px;
       font-style: italic;
-      text-decoration: underline; /* italic heading */
-    } 
-    
+      text-decoration: underline;
+      color: #9D9D00; /* mustard accent */
+    }
+
     .home-icon {
-    width: 60px;   /* icon ka size */
-    height: 55px;
-    position: absolute;
-    left: 20px;   /* left corner */
-    top: 10px;    /* thoda upar se neeche */
-    cursor: pointer;
-    transition: transform 0.3s ease, opacity 0.3s ease; /* hand cursor jab hover kare */
-}
-.home-icon:hover {
-    transform: scale(1.2); /* thoda bara ho jaye hover pe */
-    opacity: 0.8;          /* thoda fade effect */
-}
+      width: 60px;
+      height: 55px;
+      position: absolute;
+      left: 20px;
+      top: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .home-icon:hover {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
 
     main {
       max-width: 900px;
@@ -50,17 +54,27 @@
 
     h2 {
       text-align: center;
-      text-decoration: underline; /* underline headings */
-      color:#b48167; /* Coffee */
+      text-decoration: underline;
+      color: #9D9D00; /* mustard accent */
       margin-top: 30px;
     }
 
     .faq-item {
       margin: 20px 0;
+      background: #fff8e7; /* light card background */
+      border-left: 5px solid #9D9D00; /* mustard accent */
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .faq-item:hover {
+      transform: translateY(-2px);
     }
 
     .faq-item h3 {
-      color: #8B4513; /* Saddle Brown */
+      color: #305C4E; /* dark green accent for questions */
       margin-bottom: 10px;
       text-decoration: underline;
     }
@@ -68,23 +82,25 @@
     .faq-item p {
       font-size: 16px;
       line-height: 1.6;
+      color: #4B2E1D; /* dark brown for readability */
     }
 
-    /* Footer Styles (black) */
+    /* Footer Styles */
     .site-footer {
-      background-color: #000; /* Black background */
-      color: white;
+      background-color: #1C352D; /* dark green footer */
+      color: #fff;
       padding: 40px 20px 20px 20px;
     }
 
     .site-footer a {
       color: #fff;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
 
     .site-footer a:hover {
+      color: #9D9D00; /* mustard hover */
       text-decoration: underline;
-      color:#ab0741;
     }
 
     .footer-top {
@@ -98,7 +114,7 @@
     .footer-column h3 {
       margin-bottom: 10px;
       font-size: 16px;
-      color: #fff; /* white headings in footer */
+      color: #9D9D00; /* mustard headings */
     }
 
     .footer-column ul {
@@ -119,11 +135,13 @@
       margin: 0 5px;
       vertical-align: middle;
       transition: transform 0.3s ease, opacity 0.3s ease;
+      filter: brightness(0) invert(1); /* white icons */
     }
 
     .social-links a:hover img {
       transform: scale(1.2);
       opacity: 0.8;
+      filter: brightness(1) invert(0);
     }
 
     /* Responsive */
@@ -146,9 +164,8 @@
 <body>
   <header>
     <a href="index.html">
-  <img src="Home.png" alt="Home" class="home-icon">
-</a>
-
+      <img src="Home.png" alt="Home" class="home-icon">
+    </a>
     <h1>FAQs</h1>
   </header>
 
@@ -157,7 +174,7 @@
 
     <div class="faq-item">
       <h3>1. How can I exchange an item?</h3>
-      <p>You can exchange any item within 7 days of purchase, provided it is unused, unwashed, and has all tags intact. Please keep your receipt for verification.</p>
+      <p>You can exchange any item within 14 days of purchase, provided it is unused, unwashed, and has all tags intact. Please keep your receipt for verification.</p>
     </div>
 
     <div class="faq-item">
@@ -181,7 +198,6 @@
     </div>
   </main>
 
-  <!-- Footer (black) -->
   <footer class="site-footer">
     <div class="footer-top">
       <div class="footer-column">
@@ -210,8 +226,7 @@
         <a href="#"><img src="facebook.png" alt="Facebook"></a>
         <a href="#"><img src="instagram.png" alt="Instagram"></a>
         <a href="#"><img src="twitter.png" alt="Twitter"></a>
-        <a href="#"><img src="youtube.png" alt="youtube"></a>
-      
+        <a href="#"><img src="youtube.png" alt="Youtube"></a>
       </div>
     </div>
   </footer>

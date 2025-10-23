@@ -5,6 +5,8 @@ const cartItemsContainer = document.getElementById("cartItems");
 const cartTotal = document.getElementById("cartTotal");
 const cartCount = document.getElementById("cartCount");
 
+const cartIcon = document.getElementById("cartIcon");
+
 let cart = [];
 
 // Open Cart
@@ -16,6 +18,11 @@ function openCart() {
 closeCart.addEventListener("click", () => {
   sideCart.classList.remove("active");
 });
+
+if (cartIcon) {
+  cartIcon.addEventListener("click", openCart);
+}
+
 
 // Add to Cart Button Click
 function addToCart(name, price, img) {

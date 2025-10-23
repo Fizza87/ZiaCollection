@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Our Stores - Zia Collection</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #f5f1f1; /* light neutral from theme */
+      font-family: 'Poppins', sans-serif;
+      color: #1C352D; /* dark green text */
+    }
+
+    .info-page {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .info-page h1 {
+      font-size: 2.6rem;
+      color: #1C352D;
+      margin-bottom: 10px;
+    }
+
+    .info-page p {
+      font-size: 1.1rem;
+      color: #1C352D;
+      margin-bottom: 40px;
+    }
+
+    .store-locations {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 40px;
+      padding: 0 20px;
+    }
+
+    .store-card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding: 25px;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .store-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .store-card h3 {
+      color: #9D9D00; /* olive accent for store titles */
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #f1f1c0; /* subtle olive underline */
+      padding-bottom: 5px;
+    }
+
+    .store-card p {
+      color: #1C352D; /* dark green text */
+    }
+
+    iframe {
+      width: 100%;
+      height: 250px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    .visit-note {
+      margin-top: 80px;
+      background-color: #fff;
+      padding: 60px 80px;
+      border-radius: 18px;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.08);
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    .visit-note h2 {
+      color: #9D9D00; /* olive accent */
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .visit-note p {
+      color: #1C352D;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .visit-note {
+        padding: 40px 25px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .info-page h1 {
+        font-size: 2rem;
+      }
+      iframe {
+        height: 200px;
+      }
+    }
+
+    .site-footer {
+      background-color: #1C352D; /* dark green footer */
+      color: #fff;
+    }
+
+    .bottom-footer-text {
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <a href="index.html"><img src="logo.png" class="logo-img" alt="Logo"></a>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="shipping.html" class="nav-link">Shipping</a></li>
+          <li><a href="track.html" class="nav-link">Track Order</a></li>
+          <li><a href="stores.html" class="nav-link active">Find Stores</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <button class="icon-btn" id="cartIcon"><img src="cart.png" class="icon-img" alt="Cart"></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-content-wrapper">
+    <section class="info-page">
+      <h1>Visit Our Stores</h1>
+      <p>Experience Zia Collection in person — explore our luxurious fabrics, try our latest outfits, and get style assistance from our expert staff.</p>
+
+      <div class="store-locations">
+        <div class="store-card">
+          <h3>📍 Gojra - </h3>
+          <p>Shop #45, 1st Floor, Gojra</p>
+          <iframe src="https://www.google.com/maps?q=Family+Mart,+Gali+Gurdwara,+Gojra&output=embed"></iframe>
+        </div>
+
+        <div class="store-card">
+          <h3>📍 Gojra  - near Rafique centre </h3>
+          <p>Shop #21, 2nd Floor,near rafique centre, Gojra</p>
+          <iframe src="https://www.google.com/maps?q=Rafiq+Center,+Gojra&output=embed"></iframe>
+        </div>
+
+        <div class="store-card">
+          <h3>📍 Faislabad  - Lylpur Galleria</h3>
+          <p>Shop #110, Ground Floor,Lylpur Galleria</p>
+          <iframe src="https://www.google.com/maps?q=Lyallpur+Galleria,+Faisalabad&output=embed"></iframe>
+        </div>
+      </div>
+
+      <div class="visit-note">
+        <h2> Why Visit Our Stores?</h2>
+        <p>In our stores, you can explore exclusive collections not available online, receive personal styling guidance, and enjoy early access to sales and new launches. Visit us today and experience the essence of timeless elegance — only at Zia Collection.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer class="site-footer">
+    <p class="bottom-footer-text">© 2025 Zia Collection. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const cartIcon = document.getElementById("cartIcon");
+    cartIcon.addEventListener("click", () => {
+      const sideCart = document.getElementById("sideCart");
+      if (sideCart) sideCart.classList.add("active");
+    });
+  </script>
+</body>
+</html>

@@ -10,15 +10,16 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #F5F5DC; 
-            color: #4B2E1D; 
+            background-color: #fdfaf6; /* light neutral from theme */
+            color: #1C352D; /* dark green text */
         }
 
         header {
-            background-color: #ab0741; 
-            color: white;
+            background: linear-gradient(to bottom, rgba(28, 53, 45, 0.9), rgba(28, 53, 45, 0.6));
+            color: #fff;
             padding: 20px 0;
             text-align: center;
+            position: relative;
         }
 
         header h1 {
@@ -26,15 +27,21 @@
             font-size: 28px;
             font-style: italic; 
         }
-        .home-icon {
-    width: 60px;   /* icon ka size */
-    height: 55px;
-    position: absolute;
-    left: 20px;   /* left corner */
-    top: 10px;    /* thoda upar se neeche */
-    cursor: pointer; /* hand cursor jab hover kare */
-}
 
+        .home-icon {
+            width: 60px;
+            height: 55px;
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .home-icon:hover {
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
 
         main {
             max-width: 900px;
@@ -43,13 +50,13 @@
         }
 
         h2 {
-            color: #b48167; /* Coffee */
+            color: #9D9D00; /* olive accent */
             margin-top: 30px;
             text-decoration: underline;
         }
 
         h3 {
-            color: #b48167; /* Saddle Brown */
+            color: #305c4e; /* dark green accent */
             margin-top: 20px;
             text-decoration: underline;
         }
@@ -65,22 +72,18 @@
 
         /* Form Styles */
         form {
-            background-color: white;
+            background-color: #fff;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             margin-top: 20px;
-            transition: transform 0.3s ease, opacity 0.3s ease;
         }
-        .home-icon:hover {
-    transform: scale(1.2); /* thoda bara ho jaye hover pe */
-    opacity: 0.8;          /* thoda fade effect */
-}
 
         label {
             display: block;
             margin-top: 15px;
             font-weight: bold;
+            color: #305c4e; /* dark green accent */
         }
 
         input[type="text"], 
@@ -101,7 +104,7 @@
         button {
             margin-top: 20px;
             padding: 12px 25px;
-            background-color: #a16753; /* Saddle Brown */
+            background-color: #305c4e; /* dark green */
             color: white;
             border: none;
             border-radius: 5px;
@@ -110,13 +113,13 @@
         }
 
         button:hover {
-            background-color: #ab0741; /* Sienna */
+            background-color: #9D9D00; /* olive accent on hover */
         }
 
-        /* Footer Styles (from your Home page) */
+        /* Footer Styles */
         .site-footer {
-            background-color:#000 ; /* Dark brown to match theme */
-            color: white;
+            background: #000;
+            color: #fff;
             padding: 40px 20px 20px 20px;
         }
 
@@ -127,7 +130,7 @@
 
         .site-footer a:hover {
             text-decoration: underline;
-            color: #ab0741;
+            color: #9D9D00; /* olive accent */
         }
 
         .footer-top {
@@ -163,11 +166,11 @@
             vertical-align: middle;
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
-          .social-links a:hover img {
-      transform: scale(1.2);
-      opacity: 0.8;
-    }
 
+        .social-links a:hover img {
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
 
         /* Responsive */
         @media (max-width: 600px) {
@@ -184,24 +187,14 @@
                 align-items: center;
             }
         }
-        .site-footer .social-links a img {
-    transition: transform 0.3s ease, opacity 0.3s ease; 
-}
-
-.site-footer .social-links a:hover img {
-    transform: scale(1.2); 
-    opacity: 0.8;         
-}
-
     </style>
 </head>
 <body>
     
     <header>
         <a href="index.html">
-  <img src="Home.png" alt="Home" class="home-icon">
-</a>
-
+            <img src="Home.png" alt="Home" class="home-icon">
+        </a>
         <h1>Exchange & Return Policy</h1>
     </header>
 
@@ -243,7 +236,7 @@
         </section>
     </main>
 
-    <!-- Home Page Footer -->
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-top">
             <div class="footer-column">

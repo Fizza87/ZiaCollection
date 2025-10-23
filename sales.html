@@ -5,207 +5,132 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zia Collections | Shop All Sale</title>
     <link rel="stylesheet" href="style.css"> 
-    
     <style>
-        .site-header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: white;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.15); 
-        }
-
-        .header-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 5%; 
-        }
-        .logo-link {
-            display: flex;
-            align-items: center;
-            text-decoration: none; 
-        }
-
-        .logo-img {
-            height: 80px; 
-            width: auto;
-        }
-        .nav-list {
-    list-style: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+/* === PAGE WRAPPER === */
+.page-content-wrapper {
+  padding-top: 120px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  z-index: 1;
 }
 
-/* Individual nav items */
-.nav-item {
-    position: relative;
+.page-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+  color: #1C352D;
 }
 
-.nav-link {
-    display: inline-block;
-    font-size: 15px;
-    padding: 0 16px;
-    color: #000;
-     text-decoration: underline;
-    color:#9A2A2A;
-    line-height: 36px;
-    transition: color 0.2s ease, transform 0.2s ease;
-    border-radius: 4px;
+/* === SALES BANNER === */
+.sales-banner-top {
+  background: linear-gradient(135deg, #9D9D00, #A6B28B);
+  color: #1C352D;
+  padding: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.nav-link:hover {
-    color: #111;
-    background: #faa5a8;
-    transform: translateY(-2px);
+.sales-banner-top h2 {
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 
-/* Icons */
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-        }
+/* === PRODUCT GRID === */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
 
-        .icon-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 5px;
-        }
+.product-card {
+  border: 2px solid #9D9D00;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  background-color: #F9F9F9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, border-color 0.3s;
+}
 
-        .icon-btn img {
-            width: 30px; 
-            height: 30px;
-        }
-        
-        .header-divider {
-            border: 0;
-            height: 1px;
-            background-color: #e0e0e0;
-            margin: 0;
-        }
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: #1C352D;
+}
 
-        .page-content-wrapper {
-            
-            padding-top: 120px; 
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-left: 20px;
-            padding-right: 20px;
-            position: relative;
-            z-index: 1;
-        }
-        .page-title {
-            text-align: center;
-            margin-bottom: 30px;
-            font-size: 2.5em;
-            color: #333;
-        }
+.product-card .product-image-container {
+  position: relative;
+}
 
-        .sales-banner-top {
-            background-color: #ab0741; 
-            color: white;
-            padding: 20px;
-            margin-bottom: 40px;
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
+.product-card .product-img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
 
-        .sales-banner-top h2 {
-            font-size: 1.8em;
-            margin-top: 0;
-            margin-bottom: 5px;
-        }
+/* === SALE BADGE === */
+.sale-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(135deg, #1C352D, #9D9D00);
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 10;
+  font-size: 0.8em;
+}
 
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            padding: 20px 0;
-        }
-        
-        .product-card {
-            border: 1px solid #ab0741;
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-            position: relative;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
-        }
+/* === PRICE === */
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
 
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
+.original-price {
+  color: #666;
+  text-decoration: line-through;
+  font-size: 1em;
+  font-weight: normal;
+}
 
-        .product-card .product-image-container {
-            position: relative;
-        }
+.sale-price {
+  color: #1C352D;
+  font-size: 1.3em;
+  font-weight: bold;
+}
 
-        .product-card .product-img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
+/* === BUTTON === */
+.add-to-cart-btn {
+  background: linear-gradient(135deg, #1C352D, #9D9D00);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 80%;
+  margin-top: 10px;
+}
 
-        .sale-badge {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background-color: #ab0741; 
-            color: white;
-            font-weight: bold;
-            padding: 5px 10px;
-            border-radius: 5px;
-            z-index: 10;
-            font-size: 0.8em;
-        }
-
-        .product-card .price-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px; 
-            margin: 10px 0;
-        }
-
-        .product-card .original-price {
-            color: #999;
-            text-decoration: line-through;
-            font-size: 1em;
-            font-weight: normal;
-        }
-
-        .product-card .sale-price {
-            color:#ab0741; 
-            font-size: 1.3em;
-            font-weight: bold;
-        }
-        
-        .add-to-cart-btn {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            width: 80%;
-            margin-top: 10px;
-        }
-
-        .add-to-cart-btn:hover {
-            background-color: #ab0741;
-        }
-
-        /* --- 4. FOOTER STYLES (Keep existing) --- */
-
-    </style>
+.add-to-cart-btn:hover {
+  background: linear-gradient(135deg, #9D9D00, #1C352D);
+  color:white;
+}
+   
+</style>
+    
 </head>
 <body>
 
@@ -221,7 +146,7 @@
                 <ul class="nav-list">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="sales.html" class="nav-link active">Sales</a></li>
-                    <li class="nav-item"><a href="NewArrivals.html" class="nav-link">New Arrivals</a></li>
+                    <a href="index.html?category=all#featured-products" class="nav-link">New Arrivals</a>
                     <li class="nav-item"><a href="kids.html" class="nav-link">Kids</a></li>
                     <li class="nav-item"><a href="women.html" class="nav-link">Women</a></li>
                     <li class="nav-item"><a href="men.html" class="nav-link">Men</a></li>
@@ -231,7 +156,7 @@
             <div class="header-right">
                 <button class="icon-btn" aria-label="Search"><img src="search.png" alt="Search" class="icon-img"></button>
                 <button class="icon-btn" aria-label="Login"><img src="login.png" alt="Login" class="icon-img"></button>
-                <button class="icon-btn" aria-label="Cart"><img src="cart.png" alt="Cart" class="icon-img"></button>
+                <button id="cartIcon" class="icon-btn" aria-label="Cart"><img src="cart.png" alt="Cart" class="icon-img"></button>
             </div>
         </div>
     </header>
@@ -246,7 +171,7 @@
                 <p>Limited-time discounts on our best sellers. All sales are final.</p>
             </div>
 
-            <h2 id="fifty-off" style="text-align: center; margin-top: 40px; color: #ff4d4d;">— 50% OFF DEALS —</h2>
+            <h2 id="fifty-off" style="text-align: center; margin-top: 40px; color: #4e4e00;">— 50% OFF DEALS —</h2>
 
             <div class="product-grid sale-page-grid">
                 
@@ -308,7 +233,7 @@
                 
             </div>
 
-            <h2 id="clearance" style="text-align: center; margin-top: 40px; color: #ff4d4d;">— CLEARANCE —</h2>
+            <h2 id="clearance" style="text-align: center; margin-top: 40px; color: #4e4e00;">— CLEARANCE —</h2>
 
             <div class="product-grid sale-page-grid">
                 
@@ -369,8 +294,8 @@
                 </div>
                 
             </div>
-            
-            <h2 id="limited-deals" style="text-align: center; margin-top: 40px; color: #ff4d4d;">— LIMITED TIME DEALS —</h2>
+
+            <h2 id="limited-deals" style="text-align: center; margin-top: 40px; color: #4e4e00;">— LIMITED TIME DEALS —</h2>
 
             <div class="product-grid sale-page-grid">
                 
